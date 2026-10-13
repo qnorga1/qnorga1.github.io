@@ -1,0 +1,131 @@
+{% include base_path %}
+{% comment %}
+  Renders academic service from _data/service.yml (see that file for the fields).
+  Categories without entries are not shown.
+{% endcomment %}
+
+{% assign service = site.data.service %}
+
+{% if service.chair.size > 0 or service.organizer.size > 0 or service.ae.size > 0 or service.steering.size > 0 %}
+<section class="cv-section">
+  <h2 class="cv-heading">Organization</h2>
+
+  {% if service.chair.size > 0 %}
+  <div class="cv-row">
+    <div class="cv-label">Chair</div>
+    <div class="cv-value">
+      {% for c in service.chair %}
+        <div class="cv-item">
+          {% if c.url %}<a href="{{c.url}}">{% endif %}<span class="hover-long" title="{{ c.long }}">{{ c.id }}</span>{% if c.url %}</a>{% endif %}
+          {% if c.role %}<span class="cv-muted">– {{ c.role }}</span>{% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  {% if service.organizer.size > 0 %}
+  <div class="cv-row">
+    <div class="cv-label">Co-organizer</div>
+    <div class="cv-value">
+      {% for c in service.organizer %}
+        <div class="cv-item">
+          {% if c.url %}<a href="{{c.url}}">{% endif %}<span class="hover-long" title="{{ c.long }}">{{ c.id }}</span>{% if c.url %}</a>{% endif %}
+          {% if c.eds %}
+            <span class="cv-muted">–
+            {% for ed in c.eds -%}
+              <a href="{{ed[1]}}">{{ed[0]}}</a>{%- unless forloop.last -%}, {% endunless -%}
+            {%- endfor -%}
+            </span>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  {% if service.ae.size > 0 %}
+  <div class="cv-row">
+    <div class="cv-label">Artifact Evaluation Chair</div>
+    <div class="cv-value">
+      {% for c in service.ae %}
+        <div class="cv-item">{{ c.id }}{% if c.years %} <span class="cv-muted">– {{ c.years | join: ", " }}</span>{% endif %}</div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  {% if service.steering.size > 0 %}
+  <div class="cv-row">
+    <div class="cv-label">Steering Committee</div>
+    <div class="cv-value">
+      {% for c in service.steering %}
+        <div class="cv-item">
+          {% if c.url %}<a href="{{c.url}}">{% endif %}{% if c.long %}{{ c.long }} ({{ c.id }}){% else %}{{ c.id }}{% endif %}{% if c.url %}</a>{% endif %}
+          {% if c.year %}<span class="cv-muted">– {{ c.year }}</span>{% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+</section>
+{% endif %}
+
+{% if service.pc.size > 0 or service.journal.size > 0 or service.sub.size > 0 or service.grant.size > 0 %}
+<section class="cv-section">
+  <h2 class="cv-heading">Reviewing</h2>
+
+  {% if service.pc.size > 0 %}
+  <div class="cv-row">
+    <div class="cv-label">Program Committee</div>
+    <div class="cv-value">
+      {% for c in service.pc %}
+        <div class="cv-item">
+          {{ c.id }}
+          <span class="cv-muted">–
+          {%- for y in c.years -%}
+            {%- assign award = c.awards | where: "year", y | first %}
+            {% if award -%}
+              <span class="hover-long cv-award" title="{{ award.label }}">{{ y }}&thinsp;★</span>
+            {%- else -%}
+              {{ y }}
+            {%- endif -%}
+            {%- unless forloop.last -%},{%- endunless -%}
+          {%- endfor -%}
+          </span>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  {% assign review_groups = "journal,sub,grant" | split: "," %}
+  {% for g in review_groups %}
+    {% assign list = service[g] %}
+    {% if list.size > 0 %}
+    <div class="cv-row">
+      <div class="cv-label">{% if g == "journal" %}Journal Reviewer{% elsif g == "sub" %}Subreviewer{% else %}Grant Reviewer{% endif %}</div>
+      <div class="cv-value">
+        {% for c in list %}
+          <div class="cv-item">{{ c.id }}{% if c.years %} <span class="cv-muted">– {{ c.years | join: ", " }}</span>{% endif %}</div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+  {% endfor %}
+</section>
+{% endif %}
+
+{% if service.other.size > 0 %}
+<section class="cv-section">
+  <h2 class="cv-heading">Other</h2>
+  {% for c in service.other %}
+  <div class="cv-row">
+    <div class="cv-label">{{ c.years | join: ", " }}</div>
+    <div class="cv-value">
+      <div class="cv-item">{% if c.url %}<a href="{{c.url}}">{{ c.text }}</a>{% else %}{{ c.text }}{% endif %}</div>
+    </div>
+  </div>
+  {% endfor %}
+</section>
+{% endif %}

@@ -1,0 +1,83 @@
+# Academic service, rendered by _includes/fmt-service.html on the /service/ page.
+# Empty categories are hidden. Hovering an `id` shows its `long` name as a tooltip.
+#
+# Organization:
+#   chair:      - { id, long, role, url }                 e.g. PC co-chair, General chair
+#   organizer:  - { id, long, url, eds: [[label, url]] }  e.g. workshops, seminars, devrooms
+#   ae:         - { id, years: [..] }                     artifact evaluation chair
+#   steering:   - { id, long, url, year }                 steering committees
+#
+# Reviewing:
+#   pc:         - { id, years: [..], awards: [{ year, label }] }  program committees (award years get a star)
+#   journal:    - { id, years: [..] }
+#   sub:        - { id, years: [..] }                     subreviewing
+#   grant:      - { id, years: [..] }                     project grant reviewing
+#
+# Other:
+#   other:      - { text, url, years: [..] }              e.g. committees, student representative
+#
+# Example:
+#
+# chair:
+#   - id: 'MICCAI 2026 Workshop X'
+#     long: 'First Workshop on X'
+#     role: 'Co-organizer'
+#     url: 'https://example.com'
+#
+# pc:
+#   - id: 'MICCAI'
+#     years: [2026, 2025]
+#     awards:
+#       - { year: 2025, label: 'Outstanding Reviewer Award' }
+#
+# journal:
+#   - id: 'Medical Image Analysis'
+#     years: [2025]
+
+# DUMMY entries (one per category) for previewing the layout -- replace or delete them.
+# Set a category to [] to hide it.
+
+chair:
+  - id: 'DUMMY-W 2026'
+    long: 'First Dummy Workshop on Medical Imaging'
+    role: 'PC co-chair'
+    url: 'https://example.com'
+
+organizer:
+  - id: 'Dummy Seminar Series'
+    long: 'Dummy Seminar Series on Image Analysis'
+    url: 'https://example.com'
+    eds: [[2026, 'https://example.com/2026'], [2025, 'https://example.com/2025']]
+
+ae:
+  - id: 'DICMI'
+    years: [2026]
+
+steering:
+  - id: 'DSC'
+    long: 'Dummy Steering Committee'
+    url: 'https://example.com'
+    year: '2025-current'
+
+pc:
+  - id: 'DICMI'
+    years: [2026, 2025]
+    awards:
+      - { year: 2025, label: 'Outstanding Reviewer Award (dummy)' }
+
+journal:
+  - id: 'Dummy Journal of Medical Image Analysis'
+    years: [2026, 2025]
+
+sub:
+  - id: 'Dummy Conference'
+    years: [2024]
+
+grant:
+  - id: 'Dummy Research Foundation'
+    years: [2026]
+
+other:
+  - text: 'Dummy PhD student representative'
+    url: 'https://example.com'
+    years: [2025, 2026]

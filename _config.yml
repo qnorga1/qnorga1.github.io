@@ -26,7 +26,7 @@ author:
   avatar           : "profile.png"
   name             : "Quinten Norga"
   pronouns         : # example: "she/her"  
-  bio              : "PhD Researcher"
+  bio              : "PhD Researcher in Post-Quantum Cryptography and Embedded Security"
   location         : "Leuven, Belgium"
   employer         : "COSIC, KU Leuven"
   uri              : # URL
@@ -82,28 +82,12 @@ author:
   youtube          : # Username
   zhihu            : # Username
 
-# Publication Category - The following the list of publication categories and their headings
-publication_category:
-  conferences:
-    title: 'Conference Papers'
-  manuscripts:
-    title: 'Journal Articles' 
-  preprint:
-    title: 'Preprints'   
-  reports:
-    title: 'Reports'
-  # thesis:
-    # title: 'PhD Thesis'
-  # books:
-    # title: 'Books'
-
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/ for social media previews
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
 future                   : true
 read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
-talkmap_link             : false      #change to true to add link to talkmap on talks page
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
   disqus:
@@ -183,8 +167,10 @@ exclude:
   - assets/js/plugins
   - assets/js/vendor
   - CHANGELOG
+  - AGENTS.md
   - Capfile
   - config
+  - docker-compose.yaml
   - Dockerfile
   - Gemfile
   - Gruntfile.js
@@ -225,22 +211,6 @@ kramdown:
   enable_coderay: false
 
 
-# These settings control the types of collections used by the template
-collections:
-  teaching:
-    output: true
-    permalink: /:collection/:path/
-  publications:
-    output: true
-    permalink: /:collection/:path/
-  portfolio:
-    output: true
-    permalink: /:collection/:path/
-  talks:
-    output: true
-    permalink: /:collection/:path/
-
-
 # These settings control how pages and collections are included in the site
 defaults:
   # _posts
@@ -261,41 +231,6 @@ defaults:
     values:
       layout: single
       author_profile: true
-  # _teaching
-  - scope:
-      path: ""
-      type: teaching
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comments: true
-  # _publications
-  - scope:
-      path: ""
-      type: publications
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comments: true
-  # _portfolio
-  - scope:
-      path: ""
-      type: portfolio
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comment: true
-  # _talks
-  - scope:
-      path: ""
-      type: talks
-    values:
-      layout: talk
-      author_profile: true
-      share: true
 
 
 # Sass/SCSS

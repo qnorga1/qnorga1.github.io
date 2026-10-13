@@ -1,0 +1,422 @@
+/* ==========================================================================
+   PUBLICATIONS (_includes/fmt-pub.html) and shared entry styles
+   ========================================================================== */
+
+/* Subtle lines and outlines derived from the text color, so they suit every theme (light and dark) */
+$entry-line: color-mix(in srgb, var(--global-text-color) 14%, transparent);
+$entry-outline: color-mix(in srgb, var(--global-text-color) 28%, transparent);
+/* links use the theme accent: some themes (e.g. air) style links like body text and rely on underlines */
+$entry-link: var(--global-base-color);
+$entry-hover-bg: color-mix(in srgb, var(--global-base-color) 10%, transparent);
+$entry-muted: color-mix(in srgb, var(--global-text-color) 68%, transparent);
+
+.pub-filter {
+  margin-bottom: .5em;
+  font-size: $type-size-6;
+  text-align: right;
+  color: $entry-muted;
+
+  select {
+    width: auto;
+    display: inline-block;
+    margin-left: .25em;
+    padding: .25em .5em;
+    font-size: 1em;
+    color: var(--global-text-color);
+    background-color: var(--global-bg-color);
+    border: 1px solid $entry-outline;
+    border-radius: 4px;
+  }
+}
+
+.archive .pub-table,
+.pub-table {
+  font-size: .9em;
+  border: none;
+
+  > tbody > tr > td,
+  > tr > td {
+    padding: .9em .5em;
+    vertical-align: top;
+    border: none;
+  }
+
+  /* divider only where a new year starts */
+  > tbody > tr.year-start:not(:first-child) > td,
+  > tr.year-start:not(:first-child) > td {
+    border-top: 1px solid $entry-line;
+  }
+
+  > tbody > tr > td.year,
+  > tr > td.year {
+    width: 4em;
+    padding-left: 0;
+    padding-right: 1em;
+    font-size: 1.1em;
+    font-weight: 700;
+    line-height: 1.4;
+    color: var(--global-base-color);
+    white-space: nowrap;
+  }
+
+  /* tables nested inside an entry (TL;DR panel) have no borders */
+  table td {
+    border: none;
+  }
+}
+
+/* Publication type label (conference / journal / preprint / report) */
+.pub-type {
+  --pub-type-hue: var(--global-text-color);
+  display: inline-block;
+  margin-right: .45em;
+  padding: .05em .55em;
+  font-size: .68em;
+  font-weight: 700;
+  letter-spacing: .04em;
+  line-height: 1.6;
+  text-transform: uppercase;
+  vertical-align: .15em;
+  white-space: nowrap;
+  color: color-mix(in srgb, var(--pub-type-hue) 75%, var(--global-text-color));
+  background-color: color-mix(in srgb, var(--pub-type-hue) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--pub-type-hue) 40%, transparent);
+  border-radius: 4px;
+}
+
+.pub-type-conference { --pub-type-hue: #2a7fd4; }
+.pub-type-journal    { --pub-type-hue: #2e9e5b; }
+.pub-type-preprint   { --pub-type-hue: #d08a1c; }
+.pub-type-report     { --pub-type-hue: #8a5cc2; }
+
+.archive a.pub-title,
+a.pub-title,
+.pub-title {
+  font-weight: 600;
+  color: var(--global-text-color);
+  text-decoration: none;
+}
+
+.archive a.pub-title:hover,
+a.pub-title:hover {
+  color: $entry-link;
+  text-decoration: underline;
+}
+
+.pub-info {
+  display: block;
+  margin-top: .15em;
+  font-size: .92em;
+  line-height: 1.5;
+}
+
+.pub-details {
+  margin-top: .3em;
+  font-size: .8em;
+  line-height: 1.6;
+  color: $entry-muted;
+
+  i {
+    margin-left: .5em;
+    margin-right: .15em;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  a,
+  .archive & a {
+    color: $entry-link;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  a.nocolor,
+  .archive & a.nocolor {
+    color: $entry-muted;
+  }
+}
+
+.pub-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4em;
+  margin-top: .55em;
+}
+
+.archive .ref-btn,
+.ref-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .35em;
+  margin: 0;
+  padding: .2em .7em;
+  font-family: inherit;
+  font-size: .78em;
+  font-weight: 500;
+  line-height: 1.5;
+  text-decoration: none;
+  white-space: nowrap;
+  color: var(--global-text-color);
+  background-color: transparent;
+  border: 1px solid $entry-outline;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: border-color .15s, background-color .15s, color .15s;
+
+  &:hover,
+  &:focus-visible {
+    color: $entry-link;
+    background-color: $entry-hover-bg;
+    border-color: $entry-link;
+    text-decoration: none;
+  }
+
+  &:visited {
+    color: var(--global-text-color);
+  }
+}
+
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.collapsible-panel {
+  font-size: .9em;
+}
+
+.collapsible-min-content {
+  margin-top: 1em;
+  margin-bottom: .5em;
+  display: none;
+}
+
+.collapsible-content {
+  margin-top: .8em;
+  margin-bottom: .3em;
+  padding: .9em 1.1em;
+  border: 1px solid $entry-line;
+  border-left: 3px solid $entry-link;
+  border-radius: 6px;
+  background-color: color-mix(in srgb, var(--global-text-color) 4%, transparent);
+  color: var(--global-text-color);
+  display: none;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.bibtex {
+  position: relative;
+  font-size: .75em;
+
+  .copy-btn {
+    position: absolute;
+    top: .5em;
+    right: .5em;
+    padding: .35em .45em;
+    font-size: 1.15em;
+    line-height: 1;
+    color: $entry-muted;
+    background-color: transparent;
+    border: 1px solid $entry-outline;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+
+    &:hover {
+      color: $entry-link;
+      background-color: $entry-hover-bg;
+      border-color: $entry-link;
+    }
+  }
+
+  .tooltip {
+    visibility: hidden;
+    width: 90px;
+    background-color: #555;
+    color: #fff;
+    font-size: .9em;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -45px;
+    opacity: 0;
+    transition: opacity .3s;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: #555 transparent transparent transparent;
+    }
+  }
+
+  .lst {
+    margin: 0;
+    padding: 0;
+    white-space: pre-wrap;
+    background: none;
+    border: none;
+    box-shadow: none;
+    color: inherit;
+  }
+}
+
+.archive .booktabs,
+.booktabs {
+  width: auto;
+  margin: .8em 0 0;
+  font-size: .85em;
+  border: none;
+
+  td {
+    padding: .15em .4em .15em 0;
+    border: none;
+    vertical-align: top;
+  }
+
+  i {
+    color: $entry-muted;
+  }
+
+  a {
+    color: $entry-link;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.bordered-table {
+  border-collapse: collapse;
+  width: auto;
+  margin: 0 auto;
+  text-align: center;
+  background-color: white;
+  color: var(--global-code-text-color);
+
+  th,
+  td {
+    border: 1px solid var(--global-dark-border-color);
+    padding: 1em;
+    text-align: center;
+  }
+}
+
+/* ==========================================================================
+   TALKS, SERVICE AND TEACHING (_includes/fmt-talk.html, fmt-service.html, fmt-teaching.html)
+   ========================================================================== */
+
+.talk-abstract {
+  font-style: italic;
+}
+
+a.nocolor {
+  color: var(--global-text-color);
+}
+
+a.nounderline {
+  text-decoration: none;
+}
+
+.hover-long[title]:not([title=""]) {
+  text-decoration: underline dotted;
+  cursor: help;
+}
+
+ul.compact-lst {
+  margin-top: 0;
+}
+
+.compact-lst li {
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   SERVICE AND TEACHING ROWS (_includes/fmt-service.html, fmt-teaching.html)
+   ========================================================================== */
+
+.cv-section {
+  margin-bottom: 2em;
+}
+
+.archive .cv-heading,
+.cv-heading {
+  margin: 1.2em 0 .4em;
+  padding-bottom: .3em;
+  font-size: 1.25em;
+  border-bottom: 1px solid $entry-line;
+}
+
+.cv-row {
+  display: grid;
+  grid-template-columns: 11em 1fr;
+  gap: .2em 1.25em;
+  padding: .7em 0;
+
+  & + .cv-row {
+    border-top: 1px solid $entry-line;
+  }
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cv-label {
+  font-size: .85em;
+  font-weight: 700;
+  line-height: 1.9;
+  color: var(--global-base-color);
+}
+
+.cv-value {
+  font-size: .9em;
+  line-height: 1.6;
+
+  .archive & a,
+  a {
+    color: $entry-link;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.cv-item + .cv-item {
+  margin-top: .45em;
+}
+
+.cv-title {
+  font-weight: 600;
+}
+
+.cv-muted {
+  color: $entry-muted;
+}
+
+.cv-award {
+  color: var(--global-text-color);
+}

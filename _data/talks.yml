@@ -1,0 +1,69 @@
+# Talks, rendered by _includes/fmt-talk.html on the /talks/ page.
+#
+# Entries are grouped by `year` (newest year first); within a year they are
+# shown in the order listed here, so keep the newest talk at the top.
+#
+# Fields (only id, title, venue and year are required):
+#
+#   id:          unique key, used as anchor and for local files, e.g. "miccai25"
+#   title:       talk title
+#   author:      list of speakers; the site author's name is shown in bold (optional)
+#   type:        e.g. "Invited talk", "Keynote", "Oral presentation", "Poster" (shown as "<type> @ <venue>")
+#   venue:       event name
+#   location:    city, country
+#   month:       e.g. "October" or "October 8"
+#   year:        year
+#   abstract:    abstract (Markdown), shown in a collapsible panel
+#
+# Buttons (set to a URL, or to `true` to use the local file in /files/):
+#
+#   slides:        true -> files/<id>-slides.pdf
+#   short-slides:  true -> files/<id>-short-slides.pdf
+#   poster:        true -> files/<id>-poster.pdf
+#   website, recording, audio: URLs
+#
+# The talk title links to the slides if present, otherwise to the website.
+#
+# Example:
+#
+#  - id: "miccai25"
+#    title: "An Example Talk Title"
+#    type: "Oral presentation"
+#    venue: "MICCAI 2025"
+#    location: "Daejeon, South Korea"
+#    month: "September 25"
+#    year: 2025
+#    slides: true
+#    website: "https://conferences.miccai.org/2025/"
+#    recording: "https://youtube.com/..."
+#    abstract: |
+#      Abstract text.
+
+talks:
+  # DUMMY entries for previewing the layout -- replace or delete them.
+
+  # Uses every field.
+  - id: "dummy26-invited"
+    title: "Dummy Invited Talk Showing Every Available Field"
+    author: ['Quinten Norga']
+    type: "Invited talk"
+    venue: "Dummy Medical Imaging Symposium"
+    location: "Leuven, Belgium"
+    month: "March 12"
+    year: 2026
+    website: "https://example.com"
+    slides: "https://example.com/dummy-slides.pdf"
+    short-slides: "https://example.com/dummy-short-slides.pdf"
+    poster: "https://example.com/dummy-poster.pdf"
+    recording: "https://example.com/dummy-recording"
+    audio: "https://example.com/dummy-audio.mp3"
+    abstract: |
+      A dummy abstract, written in **Markdown** and shown in a collapsible panel.
+
+      It can span multiple paragraphs.
+
+  # Only the required fields.
+  - id: "dummy25-oral"
+    title: "Dummy Oral Presentation with Only the Required Fields"
+    venue: "Dummy International Conference on Medical Imaging"
+    year: 2025

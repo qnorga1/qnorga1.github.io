@@ -1,0 +1,119 @@
+{% include base_path %}
+{% comment %}
+  Renders teaching and supervision from _data/teaching.yml (see that file for the fields).
+  Categories without entries are not shown.
+{% endcomment %}
+
+{% assign edu = site.data.teaching %}
+
+{% if edu.courses.size > 0 or edu.ta.size > 0 or edu.guest.size > 0 %}
+<section class="cv-section">
+  <h2 class="cv-heading">Courses</h2>
+
+  {% assign course_groups = "courses,ta" | split: "," %}
+  {% for g in course_groups %}
+    {% assign list = edu[g] %}
+    {% if list.size > 0 %}
+    <div class="cv-row">
+      <div class="cv-label">{% if g == "ta" %}Teaching Assistant{% else %}Lecturer{% endif %}</div>
+      <div class="cv-value">
+        {% for c in list %}
+          <div class="cv-item">
+            <span class="cv-title">{{ c.course }}</span>
+            <span class="cv-muted">– {{ c.years | join: ", " }}{% if c.note %} ({{ c.note }}){% endif %}</span>
+            {% if c.id or c.url or c.lab or c.home %}
+            <div class="pub-buttons">
+              {% for i in c.id -%}
+                <a href="https://onderwijsaanbod.kuleuven.be/{{- c.years[0] | minus: 1 -}}/syllabi/v/e/{{- i[0] -}}N.htm" class="ref-btn">
+                  <i class="fas fa-info-circle" style="color: var(--global-base-color)"></i>
+                  B-KUL-{{- i[0] }}{% if i[1] %} · {{ i[1] }} ECTS{% endif %}
+                </a>
+              {%- endfor -%}
+              {% if c.url %}
+                <a href="{{- c.url -}}" class="ref-btn">
+                  <i class="fas fa-globe-europe" aria-hidden="true" style="color: var(--global-base-color)"></i> Course page
+                </a>
+              {% endif %}
+              {% if c.lab %}
+                <a href="{{- c.lab -}}" class="ref-btn">
+                  <i class="fas fa-flask" aria-hidden="true" style="color: var(--global-base-color)"></i> Lab sessions
+                </a>
+              {% endif %}
+              {% if c.home %}
+                <a href="{{- c.home -}}" class="ref-btn">
+                  <i class="fab fa-github"></i> Homeworks
+                </a>
+              {% endif %}
+            </div>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+  {% endfor %}
+
+  {% if edu.guest.size > 0 %}
+  <div class="cv-row">
+    <div class="cv-label">Guest Lectures</div>
+    <div class="cv-value">
+      {% for c in edu.guest %}
+        <div class="cv-item">{{ c.venue }} <span class="cv-muted">– {{ c.years | join: ", " }}</span></div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+</section>
+{% endif %}
+
+{% if edu.phd.size > 0 or edu.msc.size > 0 or edu.bsc.size > 0 %}
+<section class="cv-section">
+  <h2 class="cv-heading">Supervision</h2>
+
+  {% if edu.phd.size > 0 %}
+  <div class="cv-row">
+    <div class="cv-label">PhD Students</div>
+    <div class="cv-value">
+      {% for p in edu.phd %}
+        <div class="cv-item">
+          <span class="cv-muted">{{ p.start }} – {{ p.end }}:</span>
+          {% if p.home %}<a href="{{p.home}}">{{p.name}}</a>{% else %}{{p.name}}{% endif %}{% if p.title %}
+            – <em>{{p.title}}</em>{% if p.pdf %}
+              <a href="{{p.pdf}}" class="nounderline"><i class="far fa-file-pdf" style="color: var(--global-pdf-color, #bb0000);" title="PhD thesis"></i></a>{% endif %}{% endif %}
+          {% if p.co-supervised %}<span class="cv-muted">(co-supervised with {{p.co-supervised}})</span>{% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  {% assign thesis_groups = "msc,bsc" | split: "," %}
+  {% for g in thesis_groups %}
+    {% assign list = edu[g] %}
+    {% if list.size > 0 %}
+    <div class="cv-row">
+      <div class="cv-label">{% if g == "msc" %}Master{% else %}Bachelor{% endif %} Theses</div>
+      <div class="cv-value">
+        {% assign years = list | group_by: "year" | sort: "name" | reverse %}
+        {% for y in years %}
+          <div class="cv-item">
+            <span class="cv-muted">{{ y.name }}:</span>
+            {% for m in y.items %}
+              {%- if m.award %}
+                <span class="hover-long cv-award" title="{{ m.award }}">{{ m.name }}&thinsp;★</span>
+              {%- else %}
+                {{ m.name }}
+              {%- endif %}
+              {%- if m.title %} (<em>{{ m.title }}</em>){% endif %}
+              {%- if m.uni %} ({{ m.uni }}){% endif %}
+              {%- if m.co-supervised %} (co-supervised with {{ m.co-supervised }}){% endif %}
+              {%- unless forloop.last %},{% endunless %}
+            {% endfor %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+  {% endfor %}
+</section>
+{% endif %}

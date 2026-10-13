@@ -1,0 +1,89 @@
+{% include base_path %}
+{% comment %}
+  Renders the talk list from _data/talks.yml (see that file for the fields).
+{% endcomment %}
+
+{% assign talks = site.data.talks.talks %}
+{% if talks and talks.size > 0 %}
+
+{% assign years = talks | group_by: "year" | sort: "name" | reverse %}
+{% assign me = site.author.name %}
+{% assign me_bold = '<b>' | append: me | append: '</b>' %}
+
+<table class="pub-table">
+{% for y in years %}
+{% for p in y.items %}
+    {% if p.slides == true %}{% capture slides_url %}{{ base_path }}/files/{{p.id}}-slides.pdf{% endcapture %}{% else %}{% assign slides_url = p.slides %}{% endif %}
+    {% assign title_url = slides_url | default: p.website %}
+    <tr id="{{p.id}}"{% if forloop.first %} class="year-start"{% endif %}>
+        <td class="year">
+            {% if forloop.first == true %}
+                {{y.name}}
+            {% endif %}
+        </td>
+        <td>
+        <div>
+            <b>
+                {% if title_url %}<a class="pub-title" href="{{ title_url }}">{{p.title}}</a>{% else %}<span class="pub-title">{{p.title}}</span>{% endif %}
+            </b>
+            <span class="pub-info">
+                {% if p.author %}
+                    {% if me %}{{ p.author | join: ', ' | replace: me, me_bold }}{% else %}{{ p.author | join: ', ' }}{% endif %}
+                    <br>
+                {% endif %}
+                <em>{% if p.type %}{{p.type}} @ {% endif %}{{p.venue}}</em>{% if p.location %}, {{p.location}}{% endif %}, {% if p.month %}{{p.month}}, {% endif %}{{p.year}}.
+            </span>
+        </div>
+
+        <div class="pub-buttons">
+            {% if p.website %}
+                <a href="{{p.website}}" class="ref-btn">
+                    <i class="fas fa-globe-europe" aria-hidden="true" style="color: var(--global-base-color)"></i> Info
+                </a>
+            {% endif %}
+            {% if slides_url %}
+                <a href="{{ slides_url }}" class="ref-btn">
+                    <i class="fab fa-slideshare"></i> Slides
+                </a>
+            {% endif %}
+            {% if p.short-slides %}
+                <a href="{% if p.short-slides == true %}{{ base_path }}/files/{{p.id}}-short-slides.pdf{% else %}{{p.short-slides}}{% endif %}" class="ref-btn">
+                    <i class="fab fa-slideshare"></i> Short Slides
+                </a>
+            {% endif %}
+            {% if p.poster %}
+                <a href="{% if p.poster == true %}{{ base_path }}/files/{{p.id}}-poster.pdf{% else %}{{p.poster}}{% endif %}" class="ref-btn">
+                    <i class="far fa-map"></i> Poster
+                </a>
+            {% endif %}
+            {% if p.recording %}
+                <a href="{{p.recording}}" class="ref-btn">
+                    <i class="fas fa-video"></i> Recording
+                </a>
+            {% endif %}
+            {% if p.audio %}
+                <a href="{{p.audio}}" class="ref-btn">
+                    <i class="fas fa-music"></i> Audio
+                </a>
+            {% endif %}
+            {% if p.abstract %}
+                <button type="button" class="ref-btn" onclick='toggleCollapse("abstract-{{p.id}}")'>
+                    <i class="fas fa-circle-info"></i> Abstract
+                </button>
+            {% endif %}
+        </div>
+
+        {% if p.abstract %}
+            <div class="collapsible-panel">
+                <div class="collapsible-content talk-abstract abstract-{{p.id}}">
+                    {{ p.abstract | markdownify }}
+                </div>
+            </div>
+        {% endif %}
+        </td>
+    </tr>
+{% endfor %}
+{% endfor %}
+</table>
+
+{% endif %}

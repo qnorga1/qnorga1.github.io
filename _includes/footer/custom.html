@@ -3,4 +3,38 @@
 <!-- Support for MathJax -->
 <script id="MathJax-script" defer src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0/tex-mml-chtml.js"></script>
 
+<!-- Collapsible panels and copy buttons used by the publications and talks pages -->
+<script>
+function toggleCollapse(id) {
+  var div = id ? document.querySelector("." + id) : null;
+  var cur = div ? div.style.display : null;
+
+  Array.from(document.getElementsByClassName('collapsible-panel')).forEach(function (panel) {
+    Array.from(panel.children).forEach(function (content) {
+      content.style.display = "none";
+    });
+  });
+
+  if (div && cur !== "block") {
+    div.style.display = "block";
+  }
+}
+
+function copyToClipboard(button) {
+  var code = button.nextElementSibling.innerText;
+  var tooltip = button.querySelector('.tooltip');
+
+  navigator.clipboard.writeText(code).then(function () {
+    tooltip.style.visibility = 'visible';
+    tooltip.style.opacity = '1';
+    setTimeout(function () {
+      tooltip.style.visibility = 'hidden';
+      tooltip.style.opacity = '0';
+    }, 2000);
+  }).catch(function (err) {
+    console.error('Failed to copy: ', err);
+  });
+}
+</script>
+
 <!-- end custom footer snippets -->

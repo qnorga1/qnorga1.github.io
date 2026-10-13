@@ -1,0 +1,70 @@
+# Teaching and supervision, rendered by _includes/fmt-teaching.html on the /teaching/ page.
+# Empty categories are hidden.
+#
+# Teaching:
+#   courses:  - { course, note, years: [..], id: [[code, ects], ..], url, lab, home }
+#               `id` adds a button per KU Leuven course code linking to its ECTS sheet
+#               (onderwijsaanbod.kuleuven.be, academic year of the first entry in `years`);
+#               `url` adds a "Course page" button, `lab` a "Lab sessions" button, `home` a "Homeworks" button.
+#   ta:       - same fields as courses, for courses where you are a teaching assistant
+#   guest:    - { venue, years: [..] }   guest lectures
+#
+# Supervision:
+#   phd:      - { name, start, end, home, title, pdf, co-supervised }
+#   msc:      - { name, year, title, uni, award, co-supervised }   grouped by year (newest first)
+#   bsc:      - { name, year, title }                               grouped by year (newest first)
+#
+# Example:
+#
+# ta:
+#   - course: 'Digital Signal Processing'
+#     note: 'exercise sessions'
+#     years: [2026, 2025]
+#     id: [['H09J2A', 6]]
+#
+# msc:
+#   - name: 'Jane Doe'
+#     year: 2025
+#     title: 'Thesis title'
+#     award: 'Best thesis award'
+
+# DUMMY entries (one or more per category) for previewing the layout -- replace or delete them.
+# Set a category to [] to hide it.
+
+courses:
+  - course: 'Dummy Course on Medical Imaging'
+    note: 'co-lecturer'
+    years: [2026]
+    url: 'https://example.com/course'
+
+ta:
+  - course: 'Dummy Course on Signal Processing'
+    note: 'exercise sessions'
+    years: [2026, 2025]
+    id: [['H00000', 6]]
+    lab: 'https://example.com/lab'
+    home: 'https://github.com/example/homework'
+
+guest:
+  - venue: 'Dummy Summer School'
+    years: [2026, 2025]
+
+phd:
+  - name: 'Dummy PhD Student'
+    start: 2025
+    end: 'current'
+    home: 'https://example.com'
+    co-supervised: 'Dummy Professor'
+
+msc:
+  - name: 'Dummy Master Student A'
+    year: 2026
+    title: 'Dummy thesis title'
+    award: 'Best thesis award (dummy)'
+  - name: 'Dummy Master Student B'
+    year: 2025
+    uni: 'Dummy University'
+
+bsc:
+  - name: 'Dummy Bachelor Student'
+    year: 2025
