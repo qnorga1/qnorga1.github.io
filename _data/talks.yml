@@ -41,9 +41,52 @@
 
 talks:
 
-  - id: "secpqc24-talk"
+  - id: "rsac25"
+    title: "Masking Gaussian Elimination at Arbitrary Order with Application to Multivariate- and Code-Based PQC"
+    type: "Paper presentation"
+    venue: "RSA Conference (RSAC)"
+    location: "San-Francisco (CA), USA"
+    month: "April 30"
+    year: 2025
+    slides: true
+    recording: "https://portal.onersac.com/link/library/5B587D2B22094BE6BD45B61CBE0A32BB"
+    website: "https://path.rsaconference.com/flow/rsac/us25/FullAgenda/page/catalog/session/1739915709659001tc1u"
+
+  - id: "cosicseminar25-2"
+    title: "Masking Gaussian Elimination at Arbitrary Order with Application to Multivariate- and Code-Based PQC"
+    type: "Talk"
+    venue: "COSIC Seminar"
+    location: "Leuven, Belgium"
+    month: "April 24"
+    year: 2025
+    slides: true
+    recording: "https://www.youtube.com/watch?v=i_ytx_Uqabs"
+    website: "https://www.esat.kuleuven.be/cosic/cosicevent/cosic-seminar-masking-gaussian-elimination-at-arbitrary-order-with-application-to-multivariate-and-code-based-pqc-quinten-norga-cosic/"
+
+  - id: "cascade25"
+    title: "X2X: Efficient First- and High-Order A2B & B2A conversions for Lattice-based PQC"
+    type: "Paper presentation"
+    venue: "CASCADE"
+    location: "Saint-Etienne, France"
+    month: "April 3"
+    year: 2025
+    slides: true 
+    website: "https://cascade-conference.org/Archives/2025/index.html"
+
+  - id: "cosicseminar25-1"
     title: "X2X: Efficient First- and High-Order A2B & B2A conversions for Lattice-based PQC"
     type: "Talk"
+    venue: "COSIC Seminar"
+    location: "Leuven, Belgium"
+    month: "March 27"
+    year: 2025
+    slides: true
+    website: "https://www.esat.kuleuven.be/cosic/cosicevent/cosic-seminar-x2x-efficient-first-and-high-order-a2b-b2a-conversions-for-lattice-based-pqc-quinten-norga-ku-leuven/"
+
+
+  - id: "secpqc24"
+    title: "X2X: Efficient First- and High-Order A2B & B2A conversions for Lattice-based PQC"
+    type: "Invited talk"
     venue: "SEC PQC, Belfort, Encrypton Workshop"
     location: "Leuven, Belgium"
     month: "September 23"
@@ -51,16 +94,17 @@ talks:
     slides: true
     website: "https://www.esat.kuleuven.be/cosic/events/secpqc-belfort-encrypton-workshop/"
 
-  - id: "space23-talk"
+
+  - id: "space23"
     title: "Securely and Efficiently Implementing Lattice-based PQC in Hardware"
-    type: "Talk"
+    type: "Invited talk"
     venue: "13th International Conference on Security, Privacy, and Applied Cryptographic Engineering (SPACE)"
     location: "Roorkee, India"
     month: "December 17"
     year: 2023
     website: "https://iitr.ac.in/space2023/"
 
-  - id: "nerdland23-booth"
+  - id: "nerdland23"
     title: "Geheimschrift"
     type: "Booth"
     venue: "Nerdland Festival"
