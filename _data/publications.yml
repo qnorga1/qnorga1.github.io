@@ -131,10 +131,3 @@ pubs:
     type: "preprint"
     year: 2024
 
-  # A technical report.
-  - id: "dummy24-report"
-    title: "Dummy Technical Report"
-    author: ['Quinten Norga', 'Dave Example']
-    venue: "Dummy University Technical Report"
-    type: "report"
-    year: 2024

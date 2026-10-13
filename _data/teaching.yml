@@ -13,6 +13,7 @@
 #   phd:      - { name, start, end, home, title, pdf, co-supervised }
 #   msc:      - { name, year, title, uni, award, co-supervised }   grouped by year (newest first)
 #   bsc:      - { name, year, title }                               grouped by year (newest first)
+#   intern:   - { name, year, title }                               grouped by year (newest first)
 #
 # Example:
 #
@@ -32,39 +33,47 @@
 # Set a category to [] to hide it.
 
 courses:
-  - course: 'Dummy Course on Medical Imaging'
-    note: 'co-lecturer'
+  - course: 'Hardware Security [H0E85A]'
+    note: 'Lecture on `Crypto Implementations`'
     years: [2026]
-    url: 'https://example.com/course'
+    url: 'https://onderwijsaanbod.kuleuven.be/syllabi/e/H0E85A'
 
 ta:
-  - course: 'Dummy Course on Signal Processing'
-    note: 'exercise sessions'
-    years: [2026, 2025]
-    id: [['H00000', 6]]
-    lab: 'https://example.com/lab'
-    home: 'https://github.com/example/homework'
+  - course: 'Hardware Security [H0E85A]'
+    # note: ''
+    years: [2027, 2026, 2025, 2024]
+    # id: [['H0E85A', 3]]
+    url: 'https://onderwijsaanbod.kuleuven.be/syllabi/e/H0E85A'
+    # lab: 'https://example.com/lab'
+    # home: 'https://github.com/example/homework'
 
-guest:
-  - venue: 'Dummy Summer School'
-    years: [2026, 2025]
+# guest:
+#   - venue: 'Dummy Summer School'
+#     years: [2026, 2025]
 
-phd:
-  - name: 'Dummy PhD Student'
-    start: 2025
-    end: 'current'
-    home: 'https://example.com'
-    co-supervised: 'Dummy Professor'
+
+
+
+# phd:
+#   - name: 'Dummy PhD Student'
+#     start: 2025
+#     end: 'current'
+#     home: 'https://example.com'
+#     co-supervised: 'Dummy Professor'
 
 msc:
-  - name: 'Dummy Master Student A'
-    year: 2026
-    title: 'Dummy thesis title'
-    award: 'Best thesis award (dummy)'
-  - name: 'Dummy Master Student B'
-    year: 2025
-    uni: 'Dummy University'
+  - name: 'Victor Feyt, Marina Gajcin, Katharina Sophie Gerber'
+    year: 2026 - 2027
+    # title: 'Dummy thesis title'
+    # award: 'Best thesis award (dummy)'
+  - name: 'Pieter Adriaens, Jules Franssens, Nelson Goossens, Adam Kopec, Quinten Martens'
+    year: 2025 - 2026
+  - name: 'Smith Neba Chi, Njokom Courage, Stelios Manasidis, Marius Blaise Pilah Mbiesset, Khan Keren Mengwi, Subhradip Palchaudhuri, Henri Vermeersch'
+    year: 2024 - 2025
+  - name: 'Loic van Baren, Uttam Kumar Ojha'
+    year: 2023 - 2024
 
-bsc:
-  - name: 'Dummy Bachelor Student'
+intern:
+  - name: 'Linda Pirker'
     year: 2025
+

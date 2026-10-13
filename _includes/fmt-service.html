@@ -71,7 +71,7 @@
 </section>
 {% endif %}
 
-{% if service.pc.size > 0 or service.journal.size > 0 or service.sub.size > 0 or service.grant.size > 0 %}
+{% if service.pc.size > 0 or service.aepc.size > 0 or service.journal.size > 0 or service.sub.size > 0 or service.grant.size > 0 %}
 <section class="cv-section">
   <h2 class="cv-heading">Reviewing</h2>
 
@@ -99,12 +99,12 @@
   </div>
   {% endif %}
 
-  {% assign review_groups = "journal,sub,grant" | split: "," %}
+  {% assign review_groups = "aepc,journal,sub,grant" | split: "," %}
   {% for g in review_groups %}
     {% assign list = service[g] %}
     {% if list.size > 0 %}
     <div class="cv-row">
-      <div class="cv-label">{% if g == "journal" %}Journal Reviewer{% elsif g == "sub" %}Subreviewer{% else %}Grant Reviewer{% endif %}</div>
+      <div class="cv-label">{% if g == "aepc" %}Artifact Evaluation Committee{% elsif g == "journal" %}Journal Reviewer{% elsif g == "sub" %}Subreviewer{% else %}Grant Reviewer{% endif %}</div>
       <div class="cv-value">
         {% for c in list %}
           <div class="cv-item">{{ c.id }}{% if c.years %} <span class="cv-muted">– {{ c.years | join: ", " }}</span>{% endif %}</div>

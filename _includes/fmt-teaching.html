@@ -66,7 +66,7 @@
 </section>
 {% endif %}
 
-{% if edu.phd.size > 0 or edu.msc.size > 0 or edu.bsc.size > 0 %}
+{% if edu.phd.size > 0 or edu.msc.size > 0 or edu.bsc.size > 0 or edu.intern.size > 0 %}
 <section class="cv-section">
   <h2 class="cv-heading">Supervision</h2>
 
@@ -87,12 +87,12 @@
   </div>
   {% endif %}
 
-  {% assign thesis_groups = "msc,bsc" | split: "," %}
+  {% assign thesis_groups = "msc,bsc,intern" | split: "," %}
   {% for g in thesis_groups %}
     {% assign list = edu[g] %}
     {% if list.size > 0 %}
     <div class="cv-row">
-      <div class="cv-label">{% if g == "msc" %}Master{% else %}Bachelor{% endif %} Theses</div>
+      <div class="cv-label">{% if g == "msc" %}Master Theses{% elsif g == "bsc" %}Bachelor Theses{% else %}Interns{% endif %}</div>
       <div class="cv-value">
         {% assign years = list | group_by: "year" | sort: "name" | reverse %}
         {% for y in years %}

@@ -9,6 +9,7 @@
 #
 # Reviewing:
 #   pc:         - { id, years: [..], awards: [{ year, label }] }  program committees (award years get a star)
+#   aepc:       - { id, years: [..] }                     artifact evaluation program committees
 #   journal:    - { id, years: [..] }
 #   sub:        - { id, years: [..] }                     subreviewing
 #   grant:      - { id, years: [..] }                     project grant reviewing
@@ -37,47 +38,72 @@
 # DUMMY entries (one per category) for previewing the layout -- replace or delete them.
 # Set a category to [] to hide it.
 
-chair:
-  - id: 'DUMMY-W 2026'
-    long: 'First Dummy Workshop on Medical Imaging'
-    role: 'PC co-chair'
-    url: 'https://example.com'
+# chair:
+#   - id: 'DUMMY-W 2026'
+#     long: 'First Dummy Workshop on Medical Imaging'
+#     role: 'PC co-chair'
+#     url: 'https://example.com'
 
-organizer:
-  - id: 'Dummy Seminar Series'
-    long: 'Dummy Seminar Series on Image Analysis'
-    url: 'https://example.com'
-    eds: [[2026, 'https://example.com/2026'], [2025, 'https://example.com/2025']]
+# organizer:
+#   - id: 'Dummy Seminar Series'
+#     long: 'Dummy Seminar Series on Image Analysis'
+#     url: 'https://example.com'
+#     eds: [[2026, 'https://example.com/2026'], [2025, 'https://example.com/2025']]
 
-ae:
-  - id: 'DICMI'
-    years: [2026]
+# ae:
+#   - id: 'DICMI'
+#     years: [2026]
 
-steering:
-  - id: 'DSC'
-    long: 'Dummy Steering Committee'
-    url: 'https://example.com'
-    year: '2025-current'
+# steering:
+#   - id: 'DSC'
+#     long: 'Dummy Steering Committee'
+#     url: 'https://example.com'
+#     year: '2025-current'
 
-pc:
-  - id: 'DICMI'
-    years: [2026, 2025]
-    awards:
-      - { year: 2025, label: 'Outstanding Reviewer Award (dummy)' }
+# pc:
+#   - id: 'DICMI'
+#     years: [2026, 2025]
+#     awards:
+#       - { year: 2025, label: 'Outstanding Reviewer Award (dummy)' }
+
+# aepc:
+#   - id: 'DICMI'
+#     years: [2026]
 
 journal:
-  - id: 'Dummy Journal of Medical Image Analysis'
-    years: [2026, 2025]
-
-sub:
-  - id: 'Dummy Conference'
+  - id: 'IEEE Transactions on Information Forensics and Security (IEEE TIFS)'
+    years: [2026]
+  - id: 'Journal of Cryptographic Engineering (JCEN)'
+    years: [2026]
+  - id: 'IEEE Transactions on Circuits and Systems Part II (IEEE TCAS-II)'
+    years: [2025]
+  - id: 'ACM Transactions on Embedded Computing Systems (ACM TECS)'
     years: [2024]
 
-grant:
-  - id: 'Dummy Research Foundation'
+sub:
+  - id: 'ACM Conference on Computer and Communications Security (ACM CCS)'
     years: [2026]
+  - id: 'LightSec'
+    years: [2026]
+  - id: 'IACR Transactions on Cryptographic Hardware and Embedded Systems (IACR TCHES)'
+    years: [2025, 2024]
+  - id: 'IEEE International Solid-State Circuits Conference (IEEE ISSCC)'
+    years: [2025, 2024]
+  - id: 'ArcticCrypt'
+    years: [2025]
+  - id: 'CASCADE'
+    years: [2025]
+  - id: 'Selected Areas in Cryptography (SAC)'
+    years: [2025]
 
-other:
-  - text: 'Dummy PhD student representative'
-    url: 'https://example.com'
-    years: [2025, 2026]
+aepc:
+  - id: 'IACR Transactions on Cryptographic Hardware and Embedded Systems (IACR TCHES)'
+    years: [2027, 2026, 2025]
+# grant:
+#   - id: 'Dummy Research Foundation'
+#     years: [2026]
+
+# other:
+#   - text: 'Dummy PhD student representative'
+#     url: 'https://example.com'
+#     years: [2025, 2026]
