@@ -8,7 +8,7 @@
 #   id:          unique key, used as anchor and for local files, e.g. "miccai25"
 #   title:       talk title
 #   author:      list of speakers; the site author's name is shown in bold (optional)
-#   type:        e.g. "Invited talk", "Keynote", "Oral presentation", "Poster" (shown as "<type> @ <venue>")
+#   type:        e.g. "(Invited) talk", "Keynote", "Paper presentation", "Poster", "Booth", "Podcast", "invited/guest lecture", "Panel discussion" (shown as "<type> @ <venue>")
 #   venue:       event name
 #   location:    city, country
 #   month:       e.g. "October" or "October 8"
@@ -40,30 +40,32 @@
 #      Abstract text.
 
 talks:
-  # DUMMY entries for previewing the layout -- replace or delete them.
 
-  # Uses every field.
-  - id: "dummy26-invited"
-    title: "Dummy Invited Talk Showing Every Available Field"
-    author: ['Quinten Norga']
-    type: "Invited talk"
-    venue: "Dummy Medical Imaging Symposium"
+  - id: "secpqc24-talk"
+    title: "X2X: Efficient First- and High-Order A2B & B2A conversions for Lattice-based PQC"
+    type: "Talk"
+    venue: "SEC PQC, Belfort, Encrypton Workshop"
     location: "Leuven, Belgium"
-    month: "March 12"
-    year: 2026
-    website: "https://example.com"
-    slides: "https://example.com/dummy-slides.pdf"
-    short-slides: "https://example.com/dummy-short-slides.pdf"
-    poster: "https://example.com/dummy-poster.pdf"
-    recording: "https://example.com/dummy-recording"
-    audio: "https://example.com/dummy-audio.mp3"
-    abstract: |
-      A dummy abstract, written in **Markdown** and shown in a collapsible panel.
+    month: "September 23"
+    year: 2024
+    slides: true
+    website: "https://www.esat.kuleuven.be/cosic/events/secpqc-belfort-encrypton-workshop/"
 
-      It can span multiple paragraphs.
+  - id: "space23-talk"
+    title: "Securely and Efficiently Implementing Lattice-based PQC in Hardware"
+    type: "Talk"
+    venue: "13th International Conference on Security, Privacy, and Applied Cryptographic Engineering (SPACE)"
+    location: "Roorkee, India"
+    month: "December 17"
+    year: 2023
+    website: "https://iitr.ac.in/space2023/"
 
-  # Only the required fields.
-  - id: "dummy25-oral"
-    title: "Dummy Oral Presentation with Only the Required Fields"
-    venue: "Dummy International Conference on Medical Imaging"
-    year: 2025
+  - id: "nerdland23-booth"
+    title: "Geheimschrift"
+    type: "Booth"
+    venue: "Nerdland Festival"
+    location: "Wachtebeke, Belgium"
+    month: "May 27"
+    year: 2023
+    website: "https://www.nerdlandfestival.be/nl/"
+

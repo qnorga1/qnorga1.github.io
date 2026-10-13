@@ -24,23 +24,23 @@
             {% if c.id or c.url or c.lab or c.home %}
             <div class="pub-buttons">
               {% for i in c.id -%}
-                <a href="https://onderwijsaanbod.kuleuven.be/{{- c.years[0] | minus: 1 -}}/syllabi/v/e/{{- i[0] -}}N.htm" class="ref-btn">
-                  <i class="fas fa-info-circle" style="color: var(--global-base-color)"></i>
+                <a href="https://onderwijsaanbod.kuleuven.be/{{- c.years[0] | minus: 1 -}}/syllabi/v/e/{{- i[0] -}}N.htm" class="ref-btn ref-btn-web">
+                  <i class="fas fa-info-circle"></i>
                   B-KUL-{{- i[0] }}{% if i[1] %} · {{ i[1] }} ECTS{% endif %}
                 </a>
               {%- endfor -%}
               {% if c.url %}
-                <a href="{{- c.url -}}" class="ref-btn">
-                  <i class="fas fa-globe-europe" aria-hidden="true" style="color: var(--global-base-color)"></i> Course page
+                <a href="{{- c.url -}}" class="ref-btn ref-btn-web">
+                  <i class="fas fa-globe-europe" aria-hidden="true"></i> Course page
                 </a>
               {% endif %}
               {% if c.lab %}
-                <a href="{{- c.lab -}}" class="ref-btn">
-                  <i class="fas fa-flask" aria-hidden="true" style="color: var(--global-base-color)"></i> Lab sessions
+                <a href="{{- c.lab -}}" class="ref-btn ref-btn-lab">
+                  <i class="fas fa-flask" aria-hidden="true"></i> Lab sessions
                 </a>
               {% endif %}
               {% if c.home %}
-                <a href="{{- c.home -}}" class="ref-btn">
+                <a href="{{- c.home -}}" class="ref-btn ref-btn-code">
                   <i class="fab fa-github"></i> Homeworks
                 </a>
               {% endif %}

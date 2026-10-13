@@ -66,68 +66,68 @@ pubs:
   # DUMMY entries for previewing the layout -- replace or delete them.
 
   # Uses (almost) every field.
-  - id: "dummy26-full"
-    short: "DummyFull"
-    title: "Dummy Paper Showing Every Available Field"
-    author: ['Alice Example', 'Quinten Norga', 'Bob Example']
-    venue: "Dummy International Conference on Medical Imaging"
-    acro: "DICMI"
-    type: "conference"
-    month: "June"
-    year: 2026
-    topic: "segmentation deep-learning uncertainty"
-    prev: "dummy25-medium"
-    pdf: "https://example.com/dummy-paper.pdf"
-    website: "https://example.com"
-    wiki: "https://en.wikipedia.org/wiki/Image_segmentation"
-    slides: "https://example.com/dummy-slides.pdf"
-    poster: "https://example.com/dummy-poster.pdf"
-    recording: "https://example.com/dummy-recording"
-    demo: "https://example.com/dummy-demo"
-    github: "https://github.com/example/dummy"
-    arxiv: "https://arxiv.org/abs/0000.00000"
-    award: "Best Paper Award (dummy)"
-    badge: "Artifacts evaluated: Available, Functional (dummy)"
-    cve: "Dummy disclosure text"
-    links: [['Dataset', 'https://example.com/data'], ['Project page', 'https://example.com/project']]
-    outreach: [['University news', 'https://example.com/news']]
-    media: [['Dummy Times', 'https://example.com/times'], ['Example Weekly', 'https://example.com/weekly']]
-    tldr: |
-      A dummy one-paragraph summary of the contribution, shown in the TL;DR panel together with the topics and prior/follow-up work.
-    bibtex: |
-      @inproceedings{example2026dummy,
-        title     = {Dummy Paper Showing Every Available Field},
-        author    = {Example, Alice and Norga, Quinten and Example, Bob},
-        booktitle = {Dummy International Conference on Medical Imaging ({DICMI})},
-        year      = {2026}
-      }
+  # - id: "dummy26-full"
+  #   short: "DummyFull"
+  #   title: "Dummy Paper Showing Every Available Field"
+  #   author: ['Alice Example', 'Quinten Norga', 'Bob Example']
+  #   venue: "Dummy International Conference on Medical Imaging"
+  #   acro: "DICMI"
+  #   type: "conference"
+  #   month: "June"
+  #   year: 2026
+  #   topic: "segmentation deep-learning uncertainty"
+  #   prev: "dummy25-medium"
+  #   pdf: "https://example.com/dummy-paper.pdf"
+  #   website: "https://example.com"
+  #   wiki: "https://en.wikipedia.org/wiki/Image_segmentation"
+  #   slides: "https://example.com/dummy-slides.pdf"
+  #   poster: "https://example.com/dummy-poster.pdf"
+  #   recording: "https://example.com/dummy-recording"
+  #   demo: "https://example.com/dummy-demo"
+  #   github: "https://github.com/example/dummy"
+  #   arxiv: "https://arxiv.org/abs/0000.00000"
+  #   award: "Best Paper Award (dummy)"
+  #   badge: "Artifacts evaluated: Available, Functional (dummy)"
+  #   cve: "Dummy disclosure text"
+  #   links: [['Dataset', 'https://example.com/data'], ['Project page', 'https://example.com/project']]
+  #   outreach: [['University news', 'https://example.com/news']]
+  #   media: [['Dummy Times', 'https://example.com/times'], ['Example Weekly', 'https://example.com/weekly']]
+  #   tldr: |
+  #     A dummy one-paragraph summary of the contribution, shown in the TL;DR panel together with the topics and prior/follow-up work.
+  #   bibtex: |
+  #     @inproceedings{example2026dummy,
+  #       title     = {Dummy Paper Showing Every Available Field},
+  #       author    = {Example, Alice and Norga, Quinten and Example, Bob},
+  #       booktitle = {Dummy International Conference on Medical Imaging ({DICMI})},
+  #       year      = {2026}
+  #     }
 
-  # A typical entry.
-  - id: "dummy25-medium"
-    short: "DummyMedium"
-    title: "Dummy Journal Article with a Typical Set of Fields"
-    author: ['Quinten Norga', 'Carol Example']
-    venue: "Dummy Journal of Medical Image Analysis"
-    type: "journal"
-    year: 2025
-    topic: "segmentation"
-    pdf: "https://example.com/dummy-article.pdf"
-    github: "https://github.com/example/dummy"
-    tldr: |
-      Prior work of the paper above; its "Follow-up work" link is generated automatically.
-    bibtex: |
-      @article{norga2025dummy,
-        title   = {Dummy Journal Article with a Typical Set of Fields},
-        author  = {Norga, Quinten and Example, Carol},
-        journal = {Dummy Journal of Medical Image Analysis},
-        year    = {2025}
-      }
+  # # A typical entry.
+  # - id: "dummy25-medium"
+  #   short: "DummyMedium"
+  #   title: "Dummy Journal Article with a Typical Set of Fields"
+  #   author: ['Quinten Norga', 'Carol Example']
+  #   venue: "Dummy Journal of Medical Image Analysis"
+  #   type: "journal"
+  #   year: 2025
+  #   topic: "segmentation"
+  #   pdf: "https://example.com/dummy-article.pdf"
+  #   github: "https://github.com/example/dummy"
+  #   tldr: |
+  #     Prior work of the paper above; its "Follow-up work" link is generated automatically.
+  #   bibtex: |
+  #     @article{norga2025dummy,
+  #       title   = {Dummy Journal Article with a Typical Set of Fields},
+  #       author  = {Norga, Quinten and Example, Carol},
+  #       journal = {Dummy Journal of Medical Image Analysis},
+  #       year    = {2025}
+  #     }
 
-  # Only the required fields.
-  - id: "dummy24-minimal"
-    title: "Dummy Preprint with Only the Required Fields"
-    author: ['Quinten Norga']
-    venue: "arXiv preprint"
-    type: "preprint"
-    year: 2024
+  # # Only the required fields.
+  # - id: "dummy24-minimal"
+  #   title: "Dummy Preprint with Only the Required Fields"
+  #   author: ['Quinten Norga']
+  #   venue: "arXiv preprint"
+  #   type: "preprint"
+  #   year: 2024
 

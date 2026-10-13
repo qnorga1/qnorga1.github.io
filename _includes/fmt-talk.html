@@ -37,37 +37,37 @@
 
         <div class="pub-buttons">
             {% if p.website %}
-                <a href="{{p.website}}" class="ref-btn">
-                    <i class="fas fa-globe-europe" aria-hidden="true" style="color: var(--global-base-color)"></i> Info
+                <a href="{{p.website}}" class="ref-btn ref-btn-web">
+                    <i class="fas fa-globe-europe" aria-hidden="true"></i> Info
                 </a>
             {% endif %}
             {% if slides_url %}
-                <a href="{{ slides_url }}" class="ref-btn">
+                <a href="{{ slides_url }}" class="ref-btn ref-btn-slides">
                     <i class="fab fa-slideshare"></i> Slides
                 </a>
             {% endif %}
             {% if p.short-slides %}
-                <a href="{% if p.short-slides == true %}{{ base_path }}/files/{{p.id}}-short-slides.pdf{% else %}{{p.short-slides}}{% endif %}" class="ref-btn">
+                <a href="{% if p.short-slides == true %}{{ base_path }}/files/{{p.id}}-short-slides.pdf{% else %}{{p.short-slides}}{% endif %}" class="ref-btn ref-btn-slides">
                     <i class="fab fa-slideshare"></i> Short Slides
                 </a>
             {% endif %}
             {% if p.poster %}
-                <a href="{% if p.poster == true %}{{ base_path }}/files/{{p.id}}-poster.pdf{% else %}{{p.poster}}{% endif %}" class="ref-btn">
+                <a href="{% if p.poster == true %}{{ base_path }}/files/{{p.id}}-poster.pdf{% else %}{{p.poster}}{% endif %}" class="ref-btn ref-btn-poster">
                     <i class="far fa-map"></i> Poster
                 </a>
             {% endif %}
             {% if p.recording %}
-                <a href="{{p.recording}}" class="ref-btn">
+                <a href="{{p.recording}}" class="ref-btn ref-btn-video">
                     <i class="fas fa-video"></i> Recording
                 </a>
             {% endif %}
             {% if p.audio %}
-                <a href="{{p.audio}}" class="ref-btn">
+                <a href="{{p.audio}}" class="ref-btn ref-btn-video">
                     <i class="fas fa-music"></i> Audio
                 </a>
             {% endif %}
             {% if p.abstract %}
-                <button type="button" class="ref-btn" onclick='toggleCollapse("abstract-{{p.id}}")'>
+                <button type="button" class="ref-btn ref-btn-tldr" onclick='toggleCollapse("abstract-{{p.id}}")'>
                     <i class="fas fa-circle-info"></i> Abstract
                 </button>
             {% endif %}

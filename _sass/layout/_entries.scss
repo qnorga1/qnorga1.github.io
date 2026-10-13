@@ -47,6 +47,12 @@ $entry-muted: color-mix(in srgb, var(--global-text-color) 68%, transparent);
     border-top: 1px solid $entry-line;
   }
 
+  /* lighter dashed divider between entries within a year, under the entry column only */
+  > tbody > tr:not(.year-start) > td:not(.year),
+  > tr:not(.year-start) > td:not(.year) {
+    border-top: 1px dashed $entry-line;
+  }
+
   > tbody > tr > td.year,
   > tr > td.year {
     width: 4em;
@@ -148,38 +154,65 @@ a.pub-title:hover {
   margin-top: .55em;
 }
 
+/* Link/action buttons: square corners like .pub-type; <a> and <button> render identically.
+   Each type (.ref-btn-pdf, -web, ...) sets --btn-hue, which tints the icon, background and hover. */
 .archive .ref-btn,
 .ref-btn {
+  -webkit-appearance: none;
+  appearance: none;
+  box-sizing: border-box;
   display: inline-flex;
   align-items: center;
-  gap: .35em;
+  gap: .4em;
   margin: 0;
-  padding: .2em .7em;
+  padding: .25em .65em;
   font-family: inherit;
   font-size: .78em;
   font-weight: 500;
+  letter-spacing: .01em;
   line-height: 1.5;
   text-decoration: none;
   white-space: nowrap;
+  vertical-align: middle;
   color: var(--global-text-color);
-  background-color: transparent;
-  border: 1px solid $entry-outline;
-  border-radius: 999px;
+  background-color: color-mix(in srgb, var(--btn-hue, var(--global-text-color)) 6%, transparent);
+  border: 1px solid color-mix(in srgb, var(--btn-hue, var(--global-text-color)) 35%, transparent);
+  border-radius: 4px;
+  box-shadow: none;
   cursor: pointer;
   transition: border-color .15s, background-color .15s, color .15s;
 
-  &:hover,
-  &:focus-visible {
-    color: $entry-link;
-    background-color: $entry-hover-bg;
-    border-color: $entry-link;
-    text-decoration: none;
+  /* fixed icon width, so labels line up across buttons */
+  i {
+    width: 1.1em;
+    text-align: center;
+    color: color-mix(in srgb, var(--btn-hue, var(--global-text-color)) 85%, var(--global-text-color));
   }
 
   &:visited {
     color: var(--global-text-color);
   }
+
+  &:hover,
+  &:focus-visible {
+    color: var(--global-text-color);
+    background-color: color-mix(in srgb, var(--btn-hue, var(--global-text-color)) 14%, transparent);
+    border-color: color-mix(in srgb, var(--btn-hue, var(--global-text-color)) 75%, transparent);
+    text-decoration: none;
+  }
 }
+
+.ref-btn-pdf    { --btn-hue: #c0392b; }  /* PDF */
+.ref-btn-web    { --btn-hue: #2a7fd4; }  /* Website, Info, course pages */
+.ref-btn-slides { --btn-hue: #d08a1c; }  /* Slides, Short Slides */
+.ref-btn-poster { --btn-hue: #8a5cc2; }  /* Poster */
+.ref-btn-video  { --btn-hue: #d63384; }  /* Recording, Talk, Demo, Audio */
+.ref-btn-arxiv  { --btn-hue: #8d6e63; }  /* Extended version (arXiv) */
+.ref-btn-cite   { --btn-hue: #2e9e5b; }  /* BibTeX */
+.ref-btn-tldr   { --btn-hue: #17a2b8; }  /* TL;DR, Abstract */
+.ref-btn-logo   { --btn-hue: #b8860b; }  /* Logo */
+.ref-btn-lab    { --btn-hue: #2e9e5b; }  /* Lab sessions */
+/* .ref-btn-code (GitHub, Wikipedia, Homeworks) keeps the neutral text colour */
 
 .flex-container {
   display: flex;

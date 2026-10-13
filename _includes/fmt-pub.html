@@ -87,62 +87,62 @@
 
         <div class="pub-buttons">
             {% if pdf_url %}
-                <a href="{{ pdf_url }}" class="ref-btn">
-                    <i class="far fa-file-pdf" style="color: var(--global-pdf-color, #bb0000);"></i> PDF
+                <a href="{{ pdf_url }}" class="ref-btn ref-btn-pdf">
+                    <i class="far fa-file-pdf"></i> PDF
                 </a>
             {% endif %}
             {% if p.website %}
-                <a href="{{p.website}}" class="ref-btn">
-                    <i class="fas fa-globe-europe" aria-hidden="true" style="color: var(--global-base-color)"></i> Website
+                <a href="{{p.website}}" class="ref-btn ref-btn-web">
+                    <i class="fas fa-globe-europe" aria-hidden="true"></i> Website
                 </a>
             {% endif %}
             {% if p.wiki %}
-                <a href="{{p.wiki}}" class="ref-btn">
+                <a href="{{p.wiki}}" class="ref-btn ref-btn-code">
                     <i class="fab fa-wikipedia-w"></i> Wikipedia
                 </a>
             {% endif %}
             {% if p.slides %}
-                <a href="{% if p.slides == true %}{{ base_path }}/files/{{p.id}}-slides.pdf{% else %}{{p.slides}}{% endif %}" class="ref-btn">
+                <a href="{% if p.slides == true %}{{ base_path }}/files/{{p.id}}-slides.pdf{% else %}{{p.slides}}{% endif %}" class="ref-btn ref-btn-slides">
                     <i class="fab fa-slideshare"></i> Slides
                 </a>
             {% endif %}
             {% if p.poster %}
-                <a href="{% if p.poster == true %}{{ base_path }}/files/{{p.id}}-poster.pdf{% else %}{{p.poster}}{% endif %}" class="ref-btn">
+                <a href="{% if p.poster == true %}{{ base_path }}/files/{{p.id}}-poster.pdf{% else %}{{p.poster}}{% endif %}" class="ref-btn ref-btn-poster">
                     <i class="far fa-map"></i> Poster
                 </a>
             {% endif %}
             {% if p.recording %}
-                <a href="{{p.recording}}" class="ref-btn">
+                <a href="{{p.recording}}" class="ref-btn ref-btn-video">
                     <i class="fas fa-video"></i> Talk
                 </a>
             {% endif %}
             {% if p.demo %}
-                <a href="{{p.demo}}" class="ref-btn">
-                    <i class="fas fa-play-circle" style="color: var(--global-pdf-color, #bb0000);"></i> Demo
+                <a href="{{p.demo}}" class="ref-btn ref-btn-video">
+                    <i class="fas fa-play-circle"></i> Demo
                 </a>
             {% endif %}
             {% if p.github %}
-                <a href="{{p.github}}" class="ref-btn">
+                <a href="{{p.github}}" class="ref-btn ref-btn-code">
                     <i class="fab fa-github"></i> GitHub
                 </a>
             {% endif %}
             {% if p.arxiv %}
-                <a href="{{p.arxiv}}" class="ref-btn">
+                <a href="{{p.arxiv}}" class="ref-btn ref-btn-arxiv">
                     <i class="fas fa-archive"></i> Extended version (arXiv)
                 </a>
             {% endif %}
             {% if p.logo %}
-                <button type="button" class="ref-btn" onclick='toggleCollapse("logo-{{p.id}}")'>
+                <button type="button" class="ref-btn ref-btn-logo" onclick='toggleCollapse("logo-{{p.id}}")'>
                     <i class="fab fa-font-awesome-flag"></i> Logo
                 </button>
             {% endif %}
             {% if p.bibtex %}
-                <button type="button" class="ref-btn" onclick='toggleCollapse("bibtex-{{p.id}}")'>
+                <button type="button" class="ref-btn ref-btn-cite" onclick='toggleCollapse("bibtex-{{p.id}}")'>
                     <i class="fas fa-quote-left"></i> BibTeX
                 </button>
             {% endif %}
             {% if has_tldr %}
-                <button type="button" class="ref-btn" onclick='toggleCollapse("tldr-{{p.id}}")'>
+                <button type="button" class="ref-btn ref-btn-tldr" onclick='toggleCollapse("tldr-{{p.id}}")'>
                     <i class="fas fa-share"></i> TL;DR
                 </button>
             {% endif %}
