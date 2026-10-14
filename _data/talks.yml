@@ -108,7 +108,7 @@ talks:
   - id: "ccs25"
     title: "mUOV: Masking the Unbalanced Oil and Vinegar Digital Signature Scheme at First- and Higher-Order"
     type: "Paper presentation"
-    venue: "ACM Conference on Computer and Communications Security (ACM CCS)"
+    venue: "ACM SIGSAC Conference on Computer and Communications Security (ACM CCS)"
     location: "Taipei, Taiwan"
     month: "October 15"
     year: 2025

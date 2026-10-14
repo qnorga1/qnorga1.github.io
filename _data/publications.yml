@@ -3,37 +3,68 @@
 # Entries are grouped by `year` (newest year first); within a year they are
 # shown in the order listed here, so keep the newest paper at the top.
 #
-# Fields (only id, title, author, venue and year are required):
+# All available fields (only id, title, author, venue and year are required; leave out the rest).
 #
-#   id:        unique key, used as HTML anchor and for local files, e.g. "miccai25-foo"
-#   short:     short name, shown in "Prior work" / "Follow-up work" links
-#   title:     paper title
-#   author:    list of authors; the site author's name (author.name in _config.yml) is shown in bold
-#   venue:     full venue name
-#   acro:      venue acronym, shown in parentheses after the venue
-#   type:      label shown before the title: conference, journal, preprint or report
-#              (any other text is shown as-is with a neutral color)
-#   month:     publication month (optional)
-#   year:      publication year
-#   topic:     space-separated topics; populates the "Filter by topic" dropdown
-#   prev:      space-separated ids of prior work; follow-up work is derived automatically
-#   tldr:      one-paragraph summary, shown in the TL;DR panel
-#   award:     award text (gold star)
-#   badge:     e.g. artifact evaluation badges
-#   cve:       CVE / disclosure text
-#   links:     list of [label, url] pairs (info icon)
-#   outreach:  list of [label, url] pairs (bullhorn icon)
-#   media:     list of [label, url] pairs (press coverage)
-#   bibtex:    full BibTeX entry as a multi-line block (shown in the BibTeX panel, with a copy button)
+# Basic information:
 #
-# Buttons (set to a URL, or to `true` to use the local file in /files/):
+#   id:        (required) unique key, used as HTML anchor (#id) and for local files in /files/
+#              e.g. "ches25-foo"
+#   title:     (required) paper title; links to the PDF when `pdf` is set
+#   author:    (required) list of authors; the site author's name (author.name in _config.yml) is shown in bold
+#              e.g. ['Alice Example', 'Quinten Norga']
+#   venue:     (required) full venue name, shown in italics
+#   year:      (required) publication year; entries are grouped by it, e.g. 2025
+#   month:     publication month, shown before the year, e.g. "June"
+#   acro:      venue acronym, shown in parentheses after the venue, e.g. "CHES"
+#   type:      label shown before the title: "conference", "journal", "preprint" or "report"
+#              (each has its own color; any other text is shown as-is with a neutral color)
+#   short:     short name, used in "Prior work" / "Follow-up work" links and logo alt text
+#              (defaults to the title / id), e.g. "FooAttack"
 #
-#   pdf:       true -> files/<id>.pdf
-#   slides:    true -> files/<id>-slides.pdf
-#   poster:    true -> files/<id>-poster.pdf
-#   logo:      true -> files/<id>-logo.svg and files/<id>-logo.png (or a file prefix instead of true)
-#   logo-alt:  true -> files/<id>-logo-alt.svg and files/<id>-logo-alt.png
-#   website, wiki, recording, demo, github, arxiv: URLs
+# Detail line (small gray line under the venue, in this order):
+#
+#   award:     award text, with a gold star, e.g. "Best Paper Award"
+#   outreach:  list of [label, url] pairs, with a bullhorn icon, e.g. [['University news', 'https://...']]
+#   presented: list of [label, url, presenter], with a presentation icon, shown as "Also presented at: ...":
+#              workshops without proceedings where the work was (also) presented. Entries are separated by ";".
+#              url and presenter are optional; leave presenter out when you presented it yourself, and
+#              use '' for the url when there is none but there is a presenter, e.g.
+#              [['Workshop A, 2025', 'https://...'], ['Workshop B, 2025', '', 'Alice Example']]
+#              e.g. [['Workshop A 2025', 'https://...'], ['Workshop B 2025']]
+#   cve:       CVE / disclosure text, with a bug icon, e.g. "CVE-2025-12345"
+#   links:     list of [label, url] pairs, with an info icon, e.g. [['Dataset', 'https://...']]
+#   badge:     text with a certificate icon, e.g. artifact evaluation badges "Artifacts Available, Functional"
+#   media:     list of [label, url] pairs, shown as "Media: ..." (press coverage)
+#
+# Buttons, in this order. File buttons take a URL, or `true` to use a local file in /files/:
+#
+#   pdf:       "PDF"       true -> files/<id>.pdf
+#   doi:       "DOI"       DOI, e.g. "10.1000/xyz123" (links to https://doi.org/...), or a full URL
+#   website:   "Website"   URL
+#   wiki:      "Wikipedia" URL
+#   slides:    "Slides"    true -> files/<id>-slides.pdf
+#   poster:    "Poster"    true -> files/<id>-poster.pdf
+#                          or another id, e.g. "uasc26" -> files/uasc26-poster.pdf (poster shown at another venue)
+#                          or a URL
+#   recording: "Talk"      URL of a talk recording
+#   demo:      "Demo"      URL
+#   github:    "GitHub"    URL
+#   arxiv:     "Extended version (arXiv)"  URL
+#   eprint:    "IACR ePrint" (IACR logo)  ePrint id, e.g. "2025/123" (links to https://eprint.iacr.org/2025/123),
+#              or a full URL
+#   logo:      "Logo"      panel with logo and download links:
+#                          true -> files/<id>-logo.svg and files/<id>-logo.png
+#                          or another id to reuse that paper's logo, e.g. "ches24-foo" -> files/ches24-foo-logo.svg
+#   logo-alt:  (with logo) second logo in the same panel, same rules: files/<id>-logo-alt.svg / .png
+#   bibtex:    "BibTeX"    full BibTeX entry as a multi-line block (`bibtex: |`), shown with a copy button
+#
+# TL;DR panel ("TL;DR" button, shown when any of these is set):
+#
+#   tldr:      one-paragraph summary (with the logo next to it, if `logo` is set)
+#   topic:     space-separated topics, listed in the panel and used for the "Filter by topic" dropdown
+#              e.g. "side-channels post-quantum"
+#   prev:      space-separated ids of prior work, listed as "Prior work"; the "Follow-up work" list
+#              of those papers is derived automatically, e.g. "ches24-foo tches23-bar"
 #
 # Example:
 #
@@ -52,6 +83,7 @@
 #    github: "https://github.com/user/repo"
 #    arxiv: "https://arxiv.org/abs/0000.00000"
 #    links: [['Dataset', 'https://example.com/data']]
+#    presented: [['Example Workshop 2025', 'https://example.com/workshop', 'Alice Example'], ['Other Workshop 2025']]
 #    tldr: |
 #      One-sentence summary of the contribution.
 #    bibtex: |
@@ -63,71 +95,171 @@
 #      }
 
 pubs:
-  # DUMMY entries for previewing the layout -- replace or delete them.
 
-  # Uses (almost) every field.
-  # - id: "dummy26-full"
-  #   short: "DummyFull"
-  #   title: "Dummy Paper Showing Every Available Field"
-  #   author: ['Alice Example', 'Quinten Norga', 'Bob Example']
-  #   venue: "Dummy International Conference on Medical Imaging"
-  #   acro: "DICMI"
-  #   type: "conference"
-  #   month: "June"
-  #   year: 2026
-  #   topic: "segmentation deep-learning uncertainty"
-  #   prev: "dummy25-medium"
-  #   pdf: "https://example.com/dummy-paper.pdf"
-  #   website: "https://example.com"
-  #   wiki: "https://en.wikipedia.org/wiki/Image_segmentation"
-  #   slides: "https://example.com/dummy-slides.pdf"
-  #   poster: "https://example.com/dummy-poster.pdf"
-  #   recording: "https://example.com/dummy-recording"
-  #   demo: "https://example.com/dummy-demo"
-  #   github: "https://github.com/example/dummy"
-  #   arxiv: "https://arxiv.org/abs/0000.00000"
-  #   award: "Best Paper Award (dummy)"
-  #   badge: "Artifacts evaluated: Available, Functional (dummy)"
-  #   cve: "Dummy disclosure text"
-  #   links: [['Dataset', 'https://example.com/data'], ['Project page', 'https://example.com/project']]
-  #   outreach: [['University news', 'https://example.com/news']]
-  #   media: [['Dummy Times', 'https://example.com/times'], ['Example Weekly', 'https://example.com/weekly']]
-  #   tldr: |
-  #     A dummy one-paragraph summary of the contribution, shown in the TL;DR panel together with the topics and prior/follow-up work.
-  #   bibtex: |
-  #     @inproceedings{example2026dummy,
-  #       title     = {Dummy Paper Showing Every Available Field},
-  #       author    = {Example, Alice and Norga, Quinten and Example, Bob},
-  #       booktitle = {Dummy International Conference on Medical Imaging ({DICMI})},
-  #       year      = {2026}
-  #     }
+  - id: "ccs25"
+    title: "mUOV: Masking the Unbalanced Oil and Vinegar Digital Signature Scheme at First- and Higher-Order"
+    author: ['Quinten Norga', 'Suparna Kundu', 'Angshuman Karmakar', 'Uttam Kumar Ojha', 'Anindya Ganguly', 'Ingrid Verbauwhede']
+    venue: "ACM SIGSAC Conference on Computer and Communications Security"
+    acro: "ACM CCS"
+    year: 2025
+    type: "conference"
+    pdf: true
+    doi: "10.1145/3719027.3765188"
+    eprint: "2024/1875"
+    presented: [['Sixth NIST PQC Standardization Conference, 2025', 'https://csrc.nist.gov/Events/2025/sixth-pqc-standardization-conference']]
+    recording: "https://csrc.nist.gov/Events/2025/6th-pqc-standardization-conference"
+    slides: true
+    github: "https://github.com/KULeuven-COSIC/mUOV"
+    bibtex: |
+      @inproceedings{CCS:KNKOGV25,
+        author       = {Kundu, Suparna and Norga, Quinten and Karmakar, Angshuman and Ojha, Uttam Kumar and Ganguly, Anindya and Verbauwhede, Ingrid},
+        editor       = {Huang, Chun{-}Ying and Chen, Jyh{-}Cheng and Shieh, Shiuh{-}Pyng and Lie, David and Cortier, V{\'{e}}ronique},
+        title        = {{mUOV}: Masking the Unbalanced Oil and Vinegar Digital Signature Scheme at First- and Higher-Order},
+        booktitle    = {Proceedings of the 2025 {ACM} {SIGSAC} Conference on Computer and Communications Security, {CCS} 2025, Taipei, Taiwan, October 13-17, 2025},
+        pages        = {1994--2008},
+        publisher    = {{ACM}},
+        year         = {2025},
+        url          = {https://doi.org/10.1145/3719027.3765188},
+        doi          = {10.1145/3719027.3765188}
+      }
 
-  # # A typical entry.
-  # - id: "dummy25-medium"
-  #   short: "DummyMedium"
-  #   title: "Dummy Journal Article with a Typical Set of Fields"
-  #   author: ['Quinten Norga', 'Carol Example']
-  #   venue: "Dummy Journal of Medical Image Analysis"
-  #   type: "journal"
-  #   year: 2025
-  #   topic: "segmentation"
-  #   pdf: "https://example.com/dummy-article.pdf"
-  #   github: "https://github.com/example/dummy"
-  #   tldr: |
-  #     Prior work of the paper above; its "Follow-up work" link is generated automatically.
-  #   bibtex: |
-  #     @article{norga2025dummy,
-  #       title   = {Dummy Journal Article with a Typical Set of Fields},
-  #       author  = {Norga, Quinten and Example, Carol},
-  #       journal = {Dummy Journal of Medical Image Analysis},
-  #       year    = {2025}
-  #     }
+  - id: "cascade25"
+    title: "X2X: Low-Randomness and High-Throughput A2B and B2A conversions for d+1 shares in Hardware"
+    author: ['Quinten Norga', "Jan-Pieter D'Anvers", 'Suparna Kundu', 'Ingrid Verbauwhede']
+    venue: "Constructive Approaches for Security Analysis and Design of Embedded"
+    acro: "CASCADE"
+    year: 2025
+    type: "conference"
+    pdf: true
+    doi: "10.1007/978-3-032-01405-4_6"
+    eprint: "2024/114"
+    slides: true 
+    github: "https://github.com/KULeuven-COSIC/X2X"
+    bibtex: |
+      @inproceedings{CASCADE:NDKV25,
+        author       = {Norga, Quinten and D'Anvers, Jan{-}Pieter and Kundu, Suparna and Verbauwhede, Ingrid},
+        editor       = {Rivain, Matthieu and Sasdrich, Pascal},
+        title        = {{X2X:} Low-Randomness and High-Throughput {A2B} and {B2A} Conversions for d+1 Shares in Hardware},
+        booktitle    = {Constructive Approaches for Security Analysis and Design of Embedded Systems - First International Conference, {CASCADE} 2025, Saint-Etienne, France, April 2-4, 2025, Proceedings},
+        series       = {Lecture Notes in Computer Science},
+        volume       = {15952},
+        pages        = {119--158},
+        publisher    = {Springer},
+        year         = {2025},
+        url          = {https://doi.org/10.1007/978-3-032-01405-4\_6},
+        doi          = {10.1007/978-3-032-01405-4\_6}
+      }
 
-  # # Only the required fields.
-  # - id: "dummy24-minimal"
-  #   title: "Dummy Preprint with Only the Required Fields"
-  #   author: ['Quinten Norga']
-  #   venue: "arXiv preprint"
-  #   type: "preprint"
-  #   year: 2024
+  - id: "rep25"
+    title: "Hardware Cost Evaluation in Systems Security"
+    author: ['Jesse De Meulemeester', 'Quinten Norga', 'Frank Piessens', 'Ingrid Verbauwhede', 'Marton Bognar']
+    venue: "ACM Conference on Reproducibility and Replicability"
+    acro: "ACM REP"
+    year: 2025
+    type: "conference"
+    pdf: true
+    doi: "10.1145/3736731.3746155"
+    presented: [['2nd Microarchitecture Security Conference (uASC), 2026', https://uasc.cc/2026/], ['OPTIMIST Workshop @ CHES, 2026', 'https://optimist-ose.org/ches26']]
+    slides: true
+    poster: "uasc26"
+    github: "https://github.com/KULeuven-COSIC/eval-hd"
+    bibtex: |
+      @inproceedings{REP:MNPVB25,
+        author       = {De Meulemeester, Jesse and Norga, Quinten and Piessens, Frank and Verbauwhede, Ingrid and Bognar, Marton},
+        title        = {Hardware Cost Evaluation in Systems Security},
+        booktitle    = {Proceedings of the 3rd {ACM} Conference on Reproducibility and Replicability, {ACM} {REP} 2025, Vancouver, Canada, July 29-31, 2025},
+        pages        = {229--233},
+        publisher    = {{ACM}},
+        year         = {2025},
+        url          = {https://doi.org/10.1145/3736731.3746155},
+        doi          = {10.1145/3736731.3746155}
+      }
+
+  - id: "rsac25"
+    title: "Masking Gaussian Elimination at Arbitrary Order, with Application to Multivariate- and Code-Based PQC"
+    author: ['Quinten Norga', 'Suparna Kundu', 'Uttam Kumar Ojha', 'Anindya Ganguly', 'Angshuman Karmakar', 'Ingrid Verbauwhede']
+    venue: "Cryptographers’ Track at the RSA Conference"
+    acro: "CT-RSAC"
+    year: 2025
+    type: "conference"
+    pdf: true
+    doi: "10.1007/978-3-031-88661-4_11"
+    eprint: "2024/1777"
+    arxiv: "https://arxiv.org/abs/2411.00067"
+    recording: "https://www.youtube.com/watch?v=i_ytx_Uqabs"
+    presented: [['Quantum Safe Internet Workshop (QSI), 2025', 'https://quantum-safeinternet.com/qsi-workshop/', 'Suparna Kundu']]
+    slides: true
+    github: "https://github.com/KULeuven-COSIC/Masking-Gaussian-Elimination"
+    bibtex: |
+      @inproceedings{CTRSA:NKOGKV25,
+        author       = {Norga, Quinten and Kundu, Suparna and Ojha, Uttam Kumar and Ganguly, Anindya and Karmakar, Angshuman and Verbauwhede, Ingrid},
+        editor       = {Patra, Arpita},
+        title        = {Masking Gaussian Elimination at Arbitrary Order with Application to Multivariate-and Code-Based {PQC}},
+        booktitle    = {Topics in Cryptology - {CT-RSA} 2025 - Cryptographers' Track at the {RSA} Conference 2025, San Francisco, CA, USA, April 28-May 1, 2025, Proceedings},
+        series       = {Lecture Notes in Computer Science},
+        volume       = {15598},
+        pages        = {249--272},
+        publisher    = {Springer},
+        year         = {2025},
+        url          = {https://doi.org/10.1007/978-3-031-88661-4\_11},
+        doi          = {10.1007/978-3-031-88661-4\_11}
+      }
+
+
+  - id: "tecs24"
+    title: "Scabbard: An Exploratory Study on Hardware Aware Design Choices of Learning with Rounding-based Key Encapsulation Mechanisms"
+    author: ['Suparna Kundu*', 'Quinten Norga*', 'Angshuman Karmakar', 'Shreya Gangopadhyay', 'Jose Bermudo Mera', 'Ingrid Verbauwhede']
+    venue: "ACM Transactions on Embedded Computing Systems"
+    acro: "ACM TECS"
+    year: 2024
+    type: "journal"
+    pdf: true
+    doi: "10.1145/3696208"
+    eprint: "2024/1439"
+    arxiv: "https://arxiv.org/abs/2409.09481"
+    bibtex: |
+      @article{TECS:KNKGMV24,
+        author      = {Kundu, Suparna and Norga, Quinten and Karmakar, Angshuman and Gangopadhyay, Shreya and Bermudo Mera, Jose Maria and Verbauwhede, Ingrid},
+        title       = {Scabbard: An Exploratory Study on Hardware Aware Design Choices of Learning with Rounding-based Key Encapsulation Mechanisms},
+        year        = {2024},
+        issue_date  = {January 2025},
+        publisher   = {Association for Computing Machinery},
+        address     = {New York, NY, USA},
+        volume      = {24},
+        number      = {1},
+        issn        = {1539-9087},
+        url         = {https://doi.org/10.1145/3696208},
+        doi         = {10.1145/3696208},
+        journal     = {{ACM} Trans. Embed. Comput. Syst.},
+        month       = nov,
+        articleno   = {10},
+        numpages    = {40}
+      }
+
+  - id: "fpl24"
+    title: "A Better Kyber Butterfly for FPGAs"
+    author: ['Jonas Bertels', 'Quinten Norga', 'Ingrid Verbauwhede']
+    venue: "34th International Conference on Field Programmable Logic and Applications"
+    acro: "FPL"
+    year: 2024
+    type: "conference"
+    pdf: true
+    doi: "10.1109/FPL64840.2024.00032"
+    eprint: "2024/1367"
+    recording: "https://www.youtube.com/watch?v=xxPkQ6SAErw"
+    github: "https://github.com/axytho/KyberButterflyCollection"
+    bibtex: |
+      @inproceedings{FPL:BerNorVer24,
+        author    = {Bertels, Jonas and Norga, Quinten and Verbauwhede, Ingrid},
+        booktitle = {2024 34th International Conference on Field-Programmable Logic and Applications (FPL)},
+        title     = {A Better {Kyber} Butterfly for {FPGAs}},
+        year      = {2024},
+        pages     = {171-177},
+        doi       = {10.1109/FPL64840.2024.00032},
+        url       = {https://doi.ieeecomputersociety.org/10.1109/FPL64840.2024.00032},
+        publisher = {IEEE Computer Society},
+        address   = {Los Alamitos, CA, USA},
+        month     = {sep}
+      }
+
 

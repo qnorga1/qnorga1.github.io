@@ -12,3 +12,10 @@ Run `jekyll serve -l -H localhost` to generate the HTML and serve it from `local
     
 You may also try `bundle exec jekyll serve -l -H localhost` to ensure jekyll to use specific dependencies on your own local machine.
 
+
+# License and third-party logos
+
+The code in this repository is licensed under the MIT License (see `LICENSE`).
+This license does not cover third-party logos and trademarks, which remain the property of their respective owners and are used only to link to their services:
+
+- `images/iacr-logo.png`: logo of the [International Association for Cryptologic Research (IACR)](https://www.iacr.org/), used on buttons linking to the [IACR Cryptology ePrint Archive](https://eprint.iacr.org/).

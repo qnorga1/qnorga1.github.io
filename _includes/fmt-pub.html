@@ -63,6 +63,14 @@
                 <a href="{{ o[1] }}" class="nocolor">{{ o[0] }}</a>{% unless forloop.last == true %},{% endunless %}
                 {% endfor %}
             {% endif %}
+            {% if p.presented %}
+                <i class="fas fa-chalkboard-user"></i>
+                Also presented at:
+                {% for w in p.presented %}
+                    {% if w[1] != blank %}<a href="{{ w[1] }}" class="nocolor">{{ w[0] }}</a>{% else %}{{ w[0] }}{% endif %}
+                    {%- if w[2] != blank %} (by {{ w[2] }}){% endif %}{% unless forloop.last %};{% endunless %}
+                {% endfor %}
+            {% endif %}
             {% if p.cve %}
                 <i class="fas fa-bug"></i>
                 {{p.cve}}
@@ -91,6 +99,28 @@
                     <i class="far fa-file-pdf"></i> PDF
                 </a>
             {% endif %}
+            {% if p.doi %}
+                {% assign doi_prefix = p.doi | slice: 0, 4 %}
+                <a href="{% if doi_prefix == 'http' %}{{p.doi}}{% else %}https://doi.org/{{p.doi}}{% endif %}" class="ref-btn ref-btn-doi">
+                    <i class="ai ai-doi"></i> DOI
+                </a>
+            {% endif %}
+            {% if p.arxiv %}
+                <a href="{{p.arxiv}}" class="ref-btn ref-btn-arxiv">
+                    <i class="ai ai-arxiv"></i> arXiv
+                </a>
+            {% endif %}
+            {% if p.eprint %}
+                {% assign eprint_prefix = p.eprint | slice: 0, 4 %}
+                <a href="{% if eprint_prefix == 'http' %}{{p.eprint}}{% else %}https://eprint.iacr.org/{{p.eprint}}{% endif %}" class="ref-btn ref-btn-eprint">
+                    <img src="{{ base_path }}/images/iacr-logo.png" alt=""> IACR ePrint
+                </a>
+            {% endif %}
+            {% if p.github %}
+                <a href="{{p.github}}" class="ref-btn ref-btn-code">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+            {% endif %}
             {% if p.website %}
                 <a href="{{p.website}}" class="ref-btn ref-btn-web">
                     <i class="fas fa-globe-europe" aria-hidden="true"></i> Website
@@ -107,7 +137,11 @@
                 </a>
             {% endif %}
             {% if p.poster %}
-                <a href="{% if p.poster == true %}{{ base_path }}/files/{{p.id}}-poster.pdf{% else %}{{p.poster}}{% endif %}" class="ref-btn ref-btn-poster">
+                {% comment %} true -> own id; a URL/path (contains "/") is used as-is; anything else is another id {% endcomment %}
+                {% if p.poster == true %}{% capture poster_url %}{{ base_path }}/files/{{p.id}}-poster.pdf{% endcapture %}
+                {% elsif p.poster contains "/" %}{% assign poster_url = p.poster %}
+                {% else %}{% capture poster_url %}{{ base_path }}/files/{{p.poster}}-poster.pdf{% endcapture %}{% endif %}
+                <a href="{{ poster_url }}" class="ref-btn ref-btn-poster">
                     <i class="far fa-map"></i> Poster
                 </a>
             {% endif %}
@@ -121,24 +155,14 @@
                     <i class="fas fa-play-circle"></i> Demo
                 </a>
             {% endif %}
-            {% if p.github %}
-                <a href="{{p.github}}" class="ref-btn ref-btn-code">
-                    <i class="fab fa-github"></i> GitHub
-                </a>
-            {% endif %}
-            {% if p.arxiv %}
-                <a href="{{p.arxiv}}" class="ref-btn ref-btn-arxiv">
-                    <i class="fas fa-archive"></i> Extended version (arXiv)
-                </a>
+            {% if p.bibtex %}
+                <button type="button" class="ref-btn ref-btn-cite" onclick='toggleCollapse("bibtex-{{p.id}}")'>
+                    <i class="fas fa-quote-left"></i> BibTeX
+                </button>
             {% endif %}
             {% if p.logo %}
                 <button type="button" class="ref-btn ref-btn-logo" onclick='toggleCollapse("logo-{{p.id}}")'>
                     <i class="fab fa-font-awesome-flag"></i> Logo
-                </button>
-            {% endif %}
-            {% if p.bibtex %}
-                <button type="button" class="ref-btn ref-btn-cite" onclick='toggleCollapse("bibtex-{{p.id}}")'>
-                    <i class="fas fa-quote-left"></i> BibTeX
                 </button>
             {% endif %}
             {% if has_tldr %}
