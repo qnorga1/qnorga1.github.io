@@ -41,6 +41,91 @@
 
 talks:
 
+  - id: "ches26"
+    title: "Threshold Implementations of Conversions Between Boolean and Arithmetic Masking"
+    type: "Poster"
+    venue: "Conference on Cryptographic Hardware and Embedded Systems (CHES)"
+    location: "Antalya, Turkiye"
+    month: "October 12"
+    year: 2026
+    poster: true 
+    website: "https://ches.iacr.org/2026/"
+
+  - id: "optimist26"
+    title: "EVAL-HD: Reproducible Hardware Cost Evaluation in Implementation Security"
+    type: "Talk"
+    venue: "OPTIMIST Workshop @ CHES 2026"
+    location: "Antalya, Turkiye"
+    month: "October 11"
+    year: 2026
+    slides: true
+    website: "https://optimist-ose.org/ches26"
+
+  - id: "pqcsa26"
+    title: "Post-Quantum Cryptography: Performance, Side Channels and Implementation Pitfalls"
+    type: "Invited talk"
+    venue: "PQCSA Workshop on Post-Quantum Cryptography: State of the Art – A One-Day Training on NIST Standards, Cryptographic Libraries and Migration Strategy"
+    location: "Bonn, Germany"
+    month: "October 6"
+    year: 2026
+    slides: true
+    website: "https://www.esat.kuleuven.be/cosic/events/pqcsa-workshop-bonn-2026/"
+    recording: "https://youtu.be/gorcv3VKK7w?si=3MBorHDr9FfIQDTW"
+
+  - id: "date26-2"
+    title: "A Graph-Theoretic Framework for Randomness Optimization in First-Order Masked Circuits"
+    type: "Paper presentation/Poster"
+    venue: "Design, Automation and Test in Europe Conference (DATE)"
+    location: "Verona, Italy"
+    month: "April 22"
+    year: 2026
+    website: "https://date26.date-conference.com/"
+
+  - id: "date26-1"
+    title: "ML-DSA-OSH: An Efficient, Open-Source Hardware Implementation of ML-DSA"
+    type: "Paper presentation/Poster"
+    venue: "Design, Automation and Test in Europe Conference (DATE)"
+    location: "Verona, Italy"
+    month: "April 20"
+    year: 2026
+    poster: true 
+    slides: true 
+    short-slides: true
+    website: "https://date26.date-conference.com/"
+    recording: "https://date26.date-conference.com/programme"
+
+  - id: "uasc26"
+    title: "Hardware Cost Evaluation in Microarchitecture Security"
+    type: "Poster"
+    venue: "2nd Microarchitecture Security Conference (uASC)"
+    location: "Leuven, Belgium"
+    month: "February 3"
+    year: 2026
+    poster: true 
+    website: "https://uasc.cc/2026/"
+
+
+  - id: "ccs25"
+    title: "mUOV: Masking the Unbalanced Oil and Vinegar Digital Signature Scheme at First- and Higher-Order"
+    type: "Paper presentation"
+    venue: "ACM Conference on Computer and Communications Security (ACM CCS)"
+    location: "Taipei, Taiwan"
+    month: "October 15"
+    year: 2025
+    slides: true
+    website: "https://www.sigsac.org/ccs/CCS2025/"
+
+  - id: "nist25"
+    title: "mUOV: Masking the Unbalanced Oil and Vinegar Digital Signature Scheme at First- and Higher-Order"
+    type: "Talk"
+    venue: "Sixth NIST PQC Standardization Conference"
+    location: "Gaithersburg (MD), USA"
+    month: "September 24"
+    year: 2025
+    slides: true
+    recording: "https://csrc.nist.gov/Events/2025/6th-pqc-standardization-conference"
+    website: "https://csrc.nist.gov/Events/2025/sixth-pqc-standardization-conference"
+
   - id: "rsac25"
     title: "Masking Gaussian Elimination at Arbitrary Order with Application to Multivariate- and Code-Based PQC"
     type: "Paper presentation"
