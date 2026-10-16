@@ -43,6 +43,8 @@
 #   website:   "Website"   URL
 #   wiki:      "Wikipedia" URL
 #   slides:    "Slides"    true -> files/<id>-slides.pdf
+#                          or another id, e.g. "uasc26" -> files/uasc26-slides.pdf (slides of a talk at another venue)
+#                          or a URL
 #   poster:    "Poster"    true -> files/<id>-poster.pdf
 #                          or another id, e.g. "uasc26" -> files/uasc26-poster.pdf (poster shown at another venue)
 #                          or a URL
@@ -96,6 +98,221 @@
 
 pubs:
 
+  - id: "tches27-3"
+    title: "Software-Pipelining The Number Theoretic Transform on Neural Processing Units: A Loop-Fission Methodology"
+    author: ['Henri Vermeersch', 'Xander Pottier', 'Thomas de Ruijter', 'Quinten Norga', 'Ingrid Verbauwhede']
+    venue: "IACR Transactions on Cryptographic Hardware and Embedded Systems"
+    acro: "IACR TCHES"
+    year: 2027
+    type: "journal"
+    pdf: true
+    doi: ###############
+    eprint: "2026/2474"
+    recording: ###############
+    badge: #####################
+    slides: #################
+    github: #######################
+    bibtex: |
+      @misc{EPRINT:VPNRV26,
+        author        = {Henri Vermeersch and Xander Pottier and Quinten Norga and Thomas de Ruijter and Ingrid Verbauwhede},
+        title         = {Software-Pipelining The Number Theoretic Transform on Neural Processing Units: A Loop-Fission Methodology},
+        howpublished  = {Cryptology {ePrint} Archive, Paper 2026/2474},
+        year          = {2026},
+        url           = {https://eprint.iacr.org/2026/2474}
+      }
+
+  - id: "tches27-2"
+    title: "RISQrypt - Fast, Secure and Agile Hardware-Software Co-Design for Post-Quantum Cryptography"
+    author: ['Tolun Tosun', 'Atil Utku Ay', 'Quinten Norga', 'Suparna Kundu', 'Melik Yazici', 'Erkay Savas', 'Ingrid Verbauwhede']
+    venue: "IACR Transactions on Cryptographic Hardware and Embedded Systems"
+    acro: "IACR TCHES"
+    year: 2027
+    type: "journal"
+    pdf: true
+    doi: ###############
+    eprint: "2026/312"
+    recording: ###############
+    badge: #####################
+    slides: #################
+    github: "https://github.com/cisec-su/RISQrypt"
+    bibtex: |
+      @misc{EPRINT:TANKYSV26,
+        author        = {Tolun Tosun and Atıl Utku Ay and Quinten Norga and Suparna Kundu and Melik Yazıcı and Erkay Savaş and Ingrid Verbauwhede},
+        title         = {{RISQrypt}: Fast, Secure and Agile Hardware-Software Co-Design for Post-Quantum Cryptography},
+        howpublished  = {Cryptology {ePrint} Archive, Paper 2026/312},
+        year          = {2026},
+        url           = {https://eprint.iacr.org/2026/312}
+      }
+      
+  - id: "tches27-1"
+    title: "MQ on my Hardware: Performance Analysis of MQOM on FPGA"
+    author: ['Stelios Manasidis', 'Quinten Norga', 'Suparna Kundu', 'Ingrid Verbauwhede']
+    venue: "IACR Transactions on Cryptographic Hardware and Embedded Systems"
+    acro: "IACR TCHES"
+    year: 2027
+    type: "journal"
+    pdf: true
+    doi: ###############
+    eprint: "2026/1483"
+    recording: ###############
+    badge: #####################
+    slides: #################
+    github: "https://github.com/KULeuven-COSIC/MQOM-in-HW"
+    bibtex: |
+      @misc{EPRINT:MNKV26,
+        author        = {Manasidis, Stelios and Norga, Quinten and Kundu, Suparna and Verbauwhede, Ingrid},
+        title         = {{MQ} on my Hardware: Performance Analysis of {MQOM} on {FPGA}},
+        howpublished  = {Cryptology {ePrint} Archive, Paper 2026/1483},
+        year          = {2026},
+        url           = {https://eprint.iacr.org/2026/1483}
+      }
+
+
+  - id: "eprint26-2"
+    title: "ATLAS: A Compact Module-LWR Signature Scheme"
+    author: ['Karthick Srivatsan', 'Debranjan Pal', 'Anindya Ganguly', 'Suparna Kundu', 'Abhinava De', 'Puja Mondal', 'Harry Hart', 'Quinten Norga', 'Prajna Mahadev', 'Supriya Adhikary', 'Debayan Das', 'Chaoyun Li', 'Angshuman Karmakar']
+    venue: "IACR Cryptology ePrint Archive"
+    acro: "IACR ePrint"
+    year: 2026
+    type: "preprint"
+    eprint: "2026/2323"
+    bibtex: |
+      @misc{EPRINT:SPGKDMHNMADLK26,
+        author        = {Karthick Srivatsan and Debranjan Pal and Anindya Ganguly and Suparna Kundu and Abhinava De and Puja Mondal and Harry Hart and Quinten Norga and Prajna Mahadev and Supriya Adhikary and Debayan Das and Chaoyun Li and Angshuman Karmakar},
+        title         = {{ATLAS}: A Compact Module-{LWR} Signature Scheme},
+        howpublished  = {Cryptology {ePrint} Archive, Paper 2026/2323},
+        year          = {2026},
+        url           = {https://eprint.iacr.org/2026/2323}
+      }
+
+  - id: "scabbard-r1"
+    title: "MORNING-Scabbard - Algorihtm Specification (Round 1)" 
+    author: ['Supriya Adhikary', 'Sonqiao Cui', 'Debayan Das', 'Abhinava De', 'Anindya Ganguly', 'Harry Hart', 'Angshuman Karmakar', 'Suparna Kundu', 'Chaoyun Li', 'Prajna Mahadev', 'Puja Mondal', 'Quinten Norga', 'Thales B. Paiva', 'Debranjan Pal']
+    venue: "NICCS Next-Generation Commercial Cryptographic Algorithms Program"
+    acro: "NICCS NGCC"
+    year: 2026
+    type: "report"
+    website: "https://sites.google.com/view/scabbard"
+    pdf: true
+    bibtex: |
+      @techreport{NICCSPQC-R1:MORNING-Scabbard26,
+        author       = {Supriya Adhikary and Sonqiao Cui and Debayan Das and Abhinava De and Anindya Ganguly and Harry Hart and Angshuman Karmakar and Suparna Kundu and Chaoyun Li and Prajna Mahadev and Puja Mondal and Quinten Norga and Thales B. Paiva and Debranjan Pal},
+        title        = {{MORNING-Scabbard}},
+        institution  = {{N}ational {I}nstitute of {C}ommercial {C}ryptography {S}tandards},
+        year         = 2026,
+        note         = {available at \url{https://www.niccs.org.cn/niccs/Round1Additional/pc/list.html}},
+      }
+
+  - id: "atlas-r1"
+    title: "MORNING-ATLAS: A Fast and Lightweight Digital Signature from Module Learning with Rounding - Algorithm Specifications and Supporting Documentation (Round 1)"
+    author: ['Supriya Adhikary', 'Debayan Das', 'Avhinava De', 'Anindya Ganguly', 'Harry Hart', 'Angshuman Karmakar', 'Suparna Kundu', 'Chaoyun Li', 'Prajna Mahadev', 'Puja Mondal', 'Quinten Norga', 'Debranjan Pal', 'Karthick Srivatsan']
+    venue: "NICCS Next-Generation Commercial Cryptographic Algorithms Program"
+    acro: "NICCS NGCC"
+    year: 2026
+    type: "report"
+    website: "https://sites.google.com/view/morningatlas"
+    pdf: true
+    bibtex: |
+      @techreport{NICCSPQC-R1:MORNING-ATLAS26,
+        author       = {Supriya Adhikary and Debayan Das and Abhinava De and Anindya Ganguly and Harry Hart and Angshuman Karmakar and Suparna Kundu and Chaoyun Li and Prajna Mahadev and Puja Mondal and Quinten Norga and Debranjan Pal and Karthick Srivatsan},
+        title        = {{MORNING-ATLAS}},
+        institution  = {{N}ational {I}nstitute of {C}ommercial {C}ryptography {S}tandards},
+        year         = 2026,
+        note         = {available at \url{https://www.niccs.org.cn/niccs/Round1Additional/pc/list.html}},
+      }
+
+  - id: "rudraksh-r1"
+    title: "Rudraksh2 - Algorithm Specification (Round 1)" #################
+    author: ['Supriya Adhikary', 'Debayan Das', 'Abhinava De', 'Anindya Ganguly', 'Archisman Ghosh', 'Harry Hart', 'Angshuman Karmakar', 'Suparna Kundu', 'Chaoyun Li', 'Prajna Mahadev', 'Puja Mondal', 'Quinten Norga', 'Thales B. Paiva', 'Debranjan Pal', 'Subhradip Palchaudhuri']
+    venue: "NICCS Next-Generation Commercial Cryptographic Algorithms Program"
+    acro: "NICCS NGCC"
+    year: 2026
+    type: "report"
+    website: "https://sites.google.com/view/rudraksh2"
+    pdf: true
+    bibtex: |
+      @techreport{NICCSPQC-R1:Rudraksh226,
+        author       = {Supriya Adhikary and Debayan Das and Abhinava De and Anindya Ganguly and Archisman Ghosh and Harry Hart and Angshuman Karmakar and Suparna Kundu and Chaoyun Li and Prajna Mahadev and Puja Mondal and Quinten Norga and Thales B. Paiva and Debranjan Pal and Subhradip Palchaudhuri},
+        title        = {{Rudraksh2}},
+        institution  = {{N}ational {I}nstitute of {C}ommercial {C}ryptography {S}tandards},
+        year         = 2026,
+        note         = {available at \url{https://www.niccs.org.cn/niccs/Round1Additional/pc/list.html}},
+      }
+
+  - id: "tches26"
+    title: "MPSpeed: Implementing and Optimizing MPC-in-the-Head Digital Signatures in Hardware (Mirath in Hardware)"
+    author: ['Stelios Manasidis', 'Quinten Norga', 'Suparna Kundu', 'Ingrid Verbauwhede']
+    venue: "IACR Transactions on Cryptographic Hardware and Embedded Systems"
+    acro: "IACR TCHES"
+    year: 2026
+    type: "journal"
+    pdf: true
+    doi: "10.46586/tches.v2026.i3.982-1006"
+    eprint: "2026/206"
+    presented: [['International Workshop on Code-Based Cryptography (CBCrypto) @ Eurocrypt, 2026', 'https://www.cb-crypto.org/', 'Stelios Manasidis']]
+    recording: ###############
+    badge: "Artifact Available, Functional"
+    slides: "cbcrypto26"
+    github: "https://github.com/KULeuven-COSIC/MIRATH-in-HW"
+    bibtex: |
+      @article{TCHES:MNKV26, 
+        author  = {Manasidis, Stelios and Norga, Quinten and Kundu, Suparna and Verbauwhede, Ingrid},
+        title   = {{MPSpeed:} Implementing and Optimizing {MPC}-in-the-Head Digital Signatures in Hardware: Accelerating Mirath on {FPGA}}, 
+        volume  = {2026}, 
+        url     = {https://tches.iacr.org/index.php/TCHES/article/view/13133}, 
+        DOI     = {10.46586/tches.v2026.i3.982-1006}, 
+        number  = {3}, 
+        journal = {{IACR} Transactions on Cryptographic Hardware and Embedded Systems}, 
+        year    = {2026}, 
+        month   = {Jul.}, 
+        pages   = {982–1006}
+      }
+
+  - id: "eprint26-1"
+    title: "HYPERSHIELD: Protecting the Hypercube MPC-in-the-Head Framework Against Differential Probing Adversaries without Masking"
+    author: ['Linda Pirker', 'Quinten Norga', 'Suparna Kundu', 'Anindya Ganguly', 'Barry van Leeuwen', 'Angshuman Karmakar', 'Ingrid Verbauwhede']
+    venue: "IACR Cryptology ePrint Archive"
+    acro: "IACR ePrint"
+    year: 2026
+    type: "preprint"
+    eprint: "2026/081"
+    bibtex: |
+      @misc{EPRINT:PNKGLKV26,
+        author        = {Pirker, Linda and Norga, Quinten and Kundu, Suparna and Ganguly, Anindya and van Leeuwen, Barry and Karmakar, Angshuman and Verbauwhede, Ingrid},
+        title         = {{HYPERSHIELD}: Protecting the Hypercube {MPC}-in-the-Head Framework Against Differential Probing Adversaries without Masking},
+        howpublished  = {Cryptology {ePrint} Archive, Paper 2026/081},
+        year          = {2026},
+        url           = {https://eprint.iacr.org/2026/081}
+      }
+
+  - id: "date26"
+    title: "ML-DSA-OSH: An Efficient, Open-Source Hardware Implementation of ML-DSA"
+    author: ['Quinten Norga', 'Suparna Kundu', 'Ingrid Verbauwhede']
+    venue: "Design, Automation and Test in Europe Conference"
+    acro: "DATE"
+    year: 2026
+    type: "conference"
+    pdf: true
+    doi: "10.23919/DATE69613.2026.11539720"
+    eprint: "2025/2337"
+    presented: [['Quantum Safe Internet Workshop (QSI), 2025', 'https://quantum-safeinternet.com/qsi-workshop/', 'Suparna Kundu']]
+    recording: "https://date26.date-conference.com/programme"
+    slides: true
+    poster: true
+    github: "https://github.com/KULeuven-COSIC/ML-DSA-OSH"
+    bibtex: |
+      @inproceedings{DATE:NKV26,
+        author       = {Norga, Quinten and Kundu, Suparna and Verbauwhede, Ingrid},
+        title        = {{ML-DSA-OSH:} An Efficient, Open-Source Hardware Implementation of {ML-DSA}},
+        booktitle    = {Design, Automation {\&} Test in Europe Conference, {DATE} 2026, Verona, Italy, April 20-22, 2026},
+        pages        = {1--3},
+        publisher    = {{IEEE}},
+        year         = {2026},
+        url          = {https://doi.org/10.23919/DATE69613.2026.11539720},
+        doi          = {10.23919/DATE69613.2026.11539720}
+      }
+    
+
   - id: "ccs25"
     title: "mUOV: Masking the Unbalanced Oil and Vinegar Digital Signature Scheme at First- and Higher-Order"
     author: ['Quinten Norga', 'Suparna Kundu', 'Angshuman Karmakar', 'Uttam Kumar Ojha', 'Anindya Ganguly', 'Ingrid Verbauwhede']
@@ -108,6 +325,7 @@ pubs:
     eprint: "2024/1875"
     presented: [['Sixth NIST PQC Standardization Conference, 2025', 'https://csrc.nist.gov/Events/2025/sixth-pqc-standardization-conference']]
     recording: "https://csrc.nist.gov/Events/2025/6th-pqc-standardization-conference"
+    badge: "Artifact Available, Functional"
     slides: true
     github: "https://github.com/KULeuven-COSIC/mUOV"
     bibtex: |

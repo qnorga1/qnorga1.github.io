@@ -81,7 +81,7 @@ talks:
     year: 2026
     website: "https://date26.date-conference.com/"
 
-  - id: "date26-1"
+  - id: "date26"
     title: "ML-DSA-OSH: An Efficient, Open-Source Hardware Implementation of ML-DSA"
     type: "Paper presentation/Poster"
     venue: "Design, Automation and Test in Europe Conference (DATE)"

@@ -132,7 +132,11 @@
                 </a>
             {% endif %}
             {% if p.slides %}
-                <a href="{% if p.slides == true %}{{ base_path }}/files/{{p.id}}-slides.pdf{% else %}{{p.slides}}{% endif %}" class="ref-btn ref-btn-slides">
+                {% comment %} true -> own id; a URL/path (contains "/") is used as-is; anything else is another id {% endcomment %}
+                {% if p.slides == true %}{% capture slides_url %}{{ base_path }}/files/{{p.id}}-slides.pdf{% endcapture %}
+                {% elsif p.slides contains "/" %}{% assign slides_url = p.slides %}
+                {% else %}{% capture slides_url %}{{ base_path }}/files/{{p.slides}}-slides.pdf{% endcapture %}{% endif %}
+                <a href="{{ slides_url }}" class="ref-btn ref-btn-slides">
                     <i class="fab fa-slideshare"></i> Slides
                 </a>
             {% endif %}
