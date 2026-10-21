@@ -188,17 +188,17 @@ pubs:
   - id: "scabbard-r1"
     title: "MORNING-Scabbard - Algorihtm Specification (Round 1)" 
     author: ['Supriya Adhikary', 'Songqiao Cui', 'Debayan Das', 'Abhinava De', 'Anindya Ganguly', 'Harry Hart', 'Angshuman Karmakar', 'Suparna Kundu', 'Chaoyun Li', 'Prajna Mahadev', 'Puja Mondal', 'Quinten Norga', 'Thales B. Paiva', 'Debranjan Pal']
-    venue: "NICCS Next-Generation Commercial Cryptographic Algorithms Program"
-    acro: "NICCS NGCC"
+    venue: "ICCS Next-Generation Commercial Cryptographic Algorithms Program"
+    acro: "ICCS NGCC"
     year: 2026
     type: "report"
     website: "https://sites.google.com/view/scabbard"
     pdf: true
     bibtex: |
-      @techreport{NICCSPQC-R1:MORNING-Scabbard26,
+      @techreport{ICCSPQC-R1:MORNING-Scabbard26,
         author       = {Supriya Adhikary and Songqiao Cui and Debayan Das and Abhinava De and Anindya Ganguly and Harry Hart and Angshuman Karmakar and Suparna Kundu and Chaoyun Li and Prajna Mahadev and Puja Mondal and Quinten Norga and Thales B. Paiva and Debranjan Pal},
         title        = {{MORNING-Scabbard}},
-        institution  = {{N}ational {I}nstitute of {C}ommercial {C}ryptography {S}tandards},
+        institution  = {{I}nstitute of {C}ommercial {C}ryptography {S}tandards},
         year         = 2026,
         note         = {available at \url{https://www.niccs.org.cn/niccs/Round1Additional/pc/list.html}},
       }
@@ -206,17 +206,17 @@ pubs:
   - id: "atlas-r1"
     title: "MORNING-ATLAS: A Fast and Lightweight Digital Signature from Module Learning with Rounding - Algorithm Specifications and Supporting Documentation (Round 1)"
     author: ['Supriya Adhikary', 'Debayan Das', 'Avhinava De', 'Anindya Ganguly', 'Harry Hart', 'Angshuman Karmakar', 'Suparna Kundu', 'Chaoyun Li', 'Prajna Mahadev', 'Puja Mondal', 'Quinten Norga', 'Debranjan Pal', 'Karthick Srivatsan']
-    venue: "NICCS Next-Generation Commercial Cryptographic Algorithms Program"
-    acro: "NICCS NGCC"
+    venue: "ICCS Next-Generation Commercial Cryptographic Algorithms Program"
+    acro: "ICCS NGCC"
     year: 2026
     type: "report"
     website: "https://sites.google.com/view/morningatlas"
     pdf: true
     bibtex: |
-      @techreport{NICCSPQC-R1:MORNING-ATLAS26,
+      @techreport{ICCSPQC-R1:MORNING-ATLAS26,
         author       = {Supriya Adhikary and Debayan Das and Abhinava De and Anindya Ganguly and Harry Hart and Angshuman Karmakar and Suparna Kundu and Chaoyun Li and Prajna Mahadev and Puja Mondal and Quinten Norga and Debranjan Pal and Karthick Srivatsan},
         title        = {{MORNING-ATLAS}},
-        institution  = {{N}ational {I}nstitute of {C}ommercial {C}ryptography {S}tandards},
+        institution  = {{I}nstitute of {C}ommercial {C}ryptography {S}tandards},
         year         = 2026,
         note         = {available at \url{https://www.niccs.org.cn/niccs/Round1Additional/pc/list.html}},
       }
@@ -224,17 +224,17 @@ pubs:
   - id: "rudraksh-r1"
     title: "Rudraksh2 - Algorithm Specification (Round 1)" #################
     author: ['Supriya Adhikary', 'Debayan Das', 'Abhinava De', 'Anindya Ganguly', 'Archisman Ghosh', 'Harry Hart', 'Angshuman Karmakar', 'Suparna Kundu', 'Chaoyun Li', 'Prajna Mahadev', 'Puja Mondal', 'Quinten Norga', 'Thales B. Paiva', 'Debranjan Pal', 'Subhradip Palchaudhuri']
-    venue: "NICCS Next-Generation Commercial Cryptographic Algorithms Program"
-    acro: "NICCS NGCC"
+    venue: "ICCS Next-Generation Commercial Cryptographic Algorithms Program"
+    acro: "ICCS NGCC"
     year: 2026
     type: "report"
     website: "https://sites.google.com/view/rudraksh2"
     pdf: true
     bibtex: |
-      @techreport{NICCSPQC-R1:Rudraksh226,
+      @techreport{ICCSPQC-R1:Rudraksh226,
         author       = {Supriya Adhikary and Debayan Das and Abhinava De and Anindya Ganguly and Archisman Ghosh and Harry Hart and Angshuman Karmakar and Suparna Kundu and Chaoyun Li and Prajna Mahadev and Puja Mondal and Quinten Norga and Thales B. Paiva and Debranjan Pal and Subhradip Palchaudhuri},
         title        = {{Rudraksh2}},
-        institution  = {{N}ational {I}nstitute of {C}ommercial {C}ryptography {S}tandards},
+        institution  = {{I}nstitute of {C}ommercial {C}ryptography {S}tandards},
         year         = 2026,
         note         = {available at \url{https://www.niccs.org.cn/niccs/Round1Additional/pc/list.html}},
       }
