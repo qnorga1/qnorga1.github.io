@@ -27,7 +27,7 @@ author:
   avatar           : "profile.jpg"
   name             : "Quinten Norga"
   pronouns         : # example: "she/her"  
-  bio              : "PhD Researcher on Post-Quantum Cryptography and Embedded Security"
+  bio              : "PhD Researcher interested in Post-Quantum Cryptography and Embedded Security"
   location         : "Leuven, Belgium"
   employer         : "COSIC, KU Leuven"
   uri              : # URL
