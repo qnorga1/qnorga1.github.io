@@ -71,6 +71,8 @@
 #     years: [2026]
 
 journal:
+  - id: 'IEEE Journal on Emerging and Selected Topics in Circuits and Systems (IEEE JETCAS)'
+    years: [2026]
   - id: 'IEEE Transactions on Information Forensics and Security (IEEE TIFS)'
     years: [2026]
   - id: 'Journal of Cryptographic Engineering (JCEN)'
@@ -81,12 +83,12 @@ journal:
     years: [2024]
 
 sub:
+  - id: 'IACR Transactions on Cryptographic Hardware and Embedded Systems (IACR TCHES)'
+    years: [2027, 2025, 2024]
   - id: 'ACM Conference on Computer and Communications Security (ACM CCS)'
     years: [2026]
   - id: 'LightSec'
     years: [2026]
-  - id: 'IACR Transactions on Cryptographic Hardware and Embedded Systems (IACR TCHES)'
-    years: [2025, 2024]
   - id: 'IEEE International Solid-State Circuits Conference (IEEE ISSCC)'
     years: [2025, 2024]
   - id: 'ArcticCrypt'
