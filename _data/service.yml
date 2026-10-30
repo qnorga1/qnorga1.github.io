@@ -83,6 +83,8 @@ journal:
     years: [2024]
 
 sub:
+  - id: 'Cryptographers’ Track at the RSAC Conference (CT-RSAC)'
+    years: [2027]
   - id: 'IACR Transactions on Cryptographic Hardware and Embedded Systems (IACR TCHES)'
     years: [2027, 2025, 2024]
   - id: 'ACM Conference on Computer and Communications Security (ACM CCS)'
