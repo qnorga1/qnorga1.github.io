@@ -100,7 +100,7 @@ pubs:
 
   - id: "tches27-3"
     title: "Software-Pipelining The Number Theoretic Transform on Neural Processing Units: A Loop-Fission Methodology"
-    author: ['Henri Vermeersch', 'Xander Pottier', 'Thomas de Ruijter', 'Quinten Norga', 'Ingrid Verbauwhede']
+    author: ['Henri Vermeersch', 'Xander Pottier', 'Quinten Norga', 'Thomas de Ruijter', 'Ingrid Verbauwhede']
     venue: "IACR Transactions on Cryptographic Hardware and Embedded Systems"
     acro: "IACR TCHES"
     year: 2027
@@ -157,7 +157,7 @@ pubs:
     recording: ###############
     badge: #####################
     slides: #################
-    github: "https://github.com/KULeuven-COSIC/MQOM-in-HW"
+    github: ###############
     bibtex: |
       @misc{EPRINT:MNKV26,
         author        = {Manasidis, Stelios and Norga, Quinten and Kundu, Suparna and Verbauwhede, Ingrid},
@@ -186,7 +186,7 @@ pubs:
       }
 
   - id: "scabbard-r1"
-    title: "MORNING-Scabbard - Algorihtm Specification (Round 1)" 
+    title: "MORNING-Scabbard - Algorithm Specification (Round 1)" 
     author: ['Supriya Adhikary', 'Songqiao Cui', 'Debayan Das', 'Abhinava De', 'Anindya Ganguly', 'Harry Hart', 'Angshuman Karmakar', 'Suparna Kundu', 'Chaoyun Li', 'Prajna Mahadev', 'Puja Mondal', 'Quinten Norga', 'Thales B. Paiva', 'Debranjan Pal']
     venue: "ICCS Next-Generation Commercial Cryptographic Algorithms Program"
     acro: "ICCS NGCC"
@@ -205,7 +205,7 @@ pubs:
 
   - id: "atlas-r1"
     title: "MORNING-ATLAS: A Fast and Lightweight Digital Signature from Module Learning with Rounding - Algorithm Specifications and Supporting Documentation (Round 1)"
-    author: ['Supriya Adhikary', 'Debayan Das', 'Avhinava De', 'Anindya Ganguly', 'Harry Hart', 'Angshuman Karmakar', 'Suparna Kundu', 'Chaoyun Li', 'Prajna Mahadev', 'Puja Mondal', 'Quinten Norga', 'Debranjan Pal', 'Karthick Srivatsan']
+    author: ['Supriya Adhikary', 'Debayan Das', 'Abhinava De', 'Anindya Ganguly', 'Harry Hart', 'Angshuman Karmakar', 'Suparna Kundu', 'Chaoyun Li', 'Prajna Mahadev', 'Puja Mondal', 'Quinten Norga', 'Debranjan Pal', 'Karthick Srivatsan']
     venue: "ICCS Next-Generation Commercial Cryptographic Algorithms Program"
     acro: "ICCS NGCC"
     year: 2026
@@ -240,7 +240,7 @@ pubs:
       }
 
   - id: "tches26"
-    title: "MPSpeed: Implementing and Optimizing MPC-in-the-Head Digital Signatures in Hardware (Mirath in Hardware)"
+    title: "MPSpeed: Implementing and Optimizing MPC-in-the-Head Digital Signatures in Hardware: Accelerating Mirath on FPGA"
     author: ['Stelios Manasidis', 'Quinten Norga', 'Suparna Kundu', 'Ingrid Verbauwhede']
     venue: "IACR Transactions on Cryptographic Hardware and Embedded Systems"
     acro: "IACR TCHES"
@@ -315,7 +315,7 @@ pubs:
 
   - id: "ccs25"
     title: "mUOV: Masking the Unbalanced Oil and Vinegar Digital Signature Scheme at First- and Higher-Order"
-    author: ['Quinten Norga', 'Suparna Kundu', 'Angshuman Karmakar', 'Uttam Kumar Ojha', 'Anindya Ganguly', 'Ingrid Verbauwhede']
+    author: ['Suparna Kundu*', 'Quinten Norga*', 'Angshuman Karmakar', 'Uttam Kumar Ojha', 'Anindya Ganguly', 'Ingrid Verbauwhede']
     venue: "ACM SIGSAC Conference on Computer and Communications Security"
     acro: "ACM CCS"
     year: 2025
@@ -344,7 +344,7 @@ pubs:
   - id: "cascade25"
     title: "X2X: Low-Randomness and High-Throughput A2B and B2A conversions for d+1 shares in Hardware"
     author: ['Quinten Norga', "Jan-Pieter D'Anvers", 'Suparna Kundu', 'Ingrid Verbauwhede']
-    venue: "Constructive Approaches for Security Analysis and Design of Embedded"
+    venue: "Constructive Approaches for Security Analysis and Design of Embedded Systems"
     acro: "CASCADE"
     year: 2025
     type: "conference"
@@ -397,7 +397,7 @@ pubs:
     title: "Masking Gaussian Elimination at Arbitrary Order, with Application to Multivariate- and Code-Based PQC"
     author: ['Quinten Norga', 'Suparna Kundu', 'Uttam Kumar Ojha', 'Anindya Ganguly', 'Angshuman Karmakar', 'Ingrid Verbauwhede']
     venue: "Cryptographers’ Track at the RSA Conference"
-    acro: "CT-RSAC"
+    acro: "CT-RSA"
     year: 2025
     type: "conference"
     pdf: true

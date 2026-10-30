@@ -130,7 +130,7 @@ talks:
     title: "Masking Gaussian Elimination at Arbitrary Order with Application to Multivariate- and Code-Based PQC"
     type: "Paper presentation"
     venue: "RSA Conference (RSAC)"
-    location: "San-Francisco (CA), USA"
+    location: "San Francisco (CA), USA"
     month: "April 30"
     year: 2025
     slides: true
