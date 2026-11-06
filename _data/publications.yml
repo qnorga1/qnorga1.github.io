@@ -157,7 +157,7 @@ pubs:
     recording: ###############
     badge: #####################
     slides: #################
-    github: ###############
+    github: "https://github.com/KULeuven-COSIC/MQOM-in-HW"
     bibtex: |
       @misc{EPRINT:MNKV26,
         author        = {Manasidis, Stelios and Norga, Quinten and Kundu, Suparna and Verbauwhede, Ingrid},
