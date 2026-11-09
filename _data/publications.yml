@@ -100,7 +100,7 @@ pubs:
 
   - id: "tches27-3"
     title: "Software-Pipelining The Number Theoretic Transform on Neural Processing Units: A Loop-Fission Methodology"
-    author: ['Henri Vermeersch', 'Xander Pottier', 'Quinten Norga', 'Thomas de Ruijter', 'Ingrid Verbauwhede']
+    author: ['Henri Vermeersch', 'Thomas de Ruijter', 'Quinten Norga', 'Xander Pottier', 'Ingrid Verbauwhede']
     venue: "IACR Transactions on Cryptographic Hardware and Embedded Systems"
     acro: "IACR TCHES"
     year: 2027
