@@ -41,6 +41,16 @@
 
 talks:
 
+  - id: "crpf26"
+    title: "Secure Post-Quantum Crypto Hardware: Recent Advancements"
+    type: "Talk"
+    venue: "CRPF Cybersecurity Industry Day"
+    location: "Mechelen, Belgium"
+    month: "December 3"
+    year: 2026
+    slides: ###########
+    website: "https://cybersecurity-industry-day.be/"
+
   - id: "ches26"
     title: "Threshold Implementations of Conversions Between Boolean and Arithmetic Masking"
     type: "Poster"
