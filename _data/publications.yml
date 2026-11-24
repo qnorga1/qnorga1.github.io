@@ -98,6 +98,21 @@
 
 pubs:
 
+  - id: "date27"
+    title: "Lost in Compilation: How Compilers Alter Constant-Time Behavior in Post-Quantum Signatures"
+    author: ['Adam Kopeć', 'Suparna Kundu', 'Quinten Norga', 'Ingrid Verbauwhede']
+    venue: "Design, Automation and Test in Europe Conference"
+    acro: "DATE"
+    year: 2027
+    type: "conference"
+    pdf: ###########
+    doi: ##############
+    eprint: ############
+    recording: ##############
+    slides: #############
+    github: #############
+    bibtex: ############
+
   - id: "tches27-3"
     title: "Software-Pipelining The Number Theoretic Transform on Neural Processing Units: A Loop-Fission Methodology"
     author: ['Henri Vermeersch', 'Thomas de Ruijter', 'Quinten Norga', 'Xander Pottier', 'Ingrid Verbauwhede']
@@ -222,7 +237,7 @@ pubs:
       }
 
   - id: "rudraksh-r1"
-    title: "Rudraksh2 - Algorithm Specification (Round 1)" #################
+    title: "Rudraksh2 - Algorithm Specification (Round 1)" 
     author: ['Supriya Adhikary', 'Debayan Das', 'Abhinava De', 'Anindya Ganguly', 'Archisman Ghosh', 'Harry Hart', 'Angshuman Karmakar', 'Suparna Kundu', 'Chaoyun Li', 'Prajna Mahadev', 'Puja Mondal', 'Quinten Norga', 'Thales B. Paiva', 'Debranjan Pal', 'Subhradip Palchaudhuri']
     venue: "ICCS Next-Generation Commercial Cryptographic Algorithms Program"
     acro: "ICCS NGCC"
