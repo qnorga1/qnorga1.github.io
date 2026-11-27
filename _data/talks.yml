@@ -42,7 +42,7 @@
 talks:
 
   - id: "crpf26"
-    title: "Secure Post-Quantum Crypto Hardware: Recent Advancements"
+    title: "Secure Hardware for Post-Quantum Cryptography"
     type: "Talk"
     venue: "CRPF Cybersecurity Industry Day"
     location: "Mechelen, Belgium"
